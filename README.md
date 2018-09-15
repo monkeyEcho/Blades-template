@@ -9,9 +9,6 @@ IMPORTANT NOTE: These files are still under construction, there is NO release of
 ### 18.06.2018
 Branched from original Blades files
 
-### 15.09.2018
-First version for internal testing
-
 ## Notes
 If you have something to say, say it here.
 

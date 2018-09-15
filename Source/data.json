@@ -1,5 +1,129 @@
 {
 	"crew": {
+		"hellstone_scavengers": {
+			"base": {
+				"claim_1_desc": "<description>",
+				"claim_1_name": "Darkness",
+				"claim_2_desc": "<description>",
+				"claim_2_name": "neutral",
+				"claim_3_desc": "<description>",
+				"claim_3_name": "neutral",
+				"claim_4_desc": "<description>",
+				"claim_4_name": "Light",
+				"claim_5_desc": "<description>",
+				"claim_5_name": "Light",
+				"claim_6_desc": "<description>",
+				"claim_6_name": "Darkness",
+				"claim_7_desc": "level 0",
+				"claim_7_name": "Hellstone Claim",
+				"claim_9_desc": "level 0",
+				"claim_9_name": "Hellstone Claim",
+				"claim_10_desc": "<description>",
+				"claim_10_name": "Light",
+				"claim_11_desc": "<description>",
+				"claim_11_name": "Darkness",
+				"claim_12_desc": "<description>",
+				"claim_12_name": "Darkness",
+				"claim_13_desc": "<description>",
+				"claim_13_name": "neutral",
+				"claim_14_desc": "level 0",
+				"claim_14_name": "Hellstone Claim",
+				"claim_15_desc": "<description>",
+				"claim_15_name": "Light",
+				"claim_bridge_1_2": "0",
+				"claim_bridge_2_7": "0",
+				"claim_bridge_3_4": "0",
+				"claim_bridge_5_10": "0",
+				"claim_bridge_6_11": "0",
+				"claim_bridge_9_14": "0",
+				"claim_bridge_12_13": "0",
+				"claim_bridge_14_15": "0",
+				"crew_xp_condition": "crew_hellstone_scavengers_xp_condition",
+				"hunting_grounds_type": "modus",
+				"hunting_grounds_description": "SCAVENGE – MINING – SUPPLY – SALE",
+				"upgrade_8_check_1": "1",
+				"upgrade_22_check_1": "1"
+			},
+			"crewability": ["heigh_ho", "transporter", "dig_dug", "leverage", "got_used_to_the_strange_life", "undue_hellish_confidence", "patron", "veteran"],
+			"upgrade": [{
+				"name": "crew_upgrade_scavenger_rigging",
+				"numboxes": "1"
+			}, {
+				"name": "crew_upgrade_elite_scouts",
+				"numboxes": "1"
+			}, {
+				"name": "crew_upgrade_elite_movers",
+				"numboxes": "1"
+			}, {
+				"name": "crew_upgrade_fine_carriages",
+				"numboxes": "1"
+			}, {
+				"name": "crew_upgrade_steady",
+				"numboxes": "3"
+			}]
+		},
+		"outlaw_posse": {
+			"base": {
+				"claim_1_desc": "<description>",
+				"claim_1_name": "Darkness",
+				"claim_2_desc": "<description>",
+				"claim_2_name": "neutral",
+				"claim_3_desc": "<description>",
+				"claim_3_name": "neutral",
+				"claim_4_desc": "<description>",
+				"claim_4_name": "Light",
+				"claim_5_desc": "<description>",
+				"claim_5_name": "Light",
+				"claim_6_desc": "<description>",
+				"claim_6_name": "Darkness",
+				"claim_7_desc": "level 0",
+				"claim_7_name": "Hellstone Claim",
+				"claim_9_desc": "level 0",
+				"claim_9_name": "Hellstone Claim",
+				"claim_10_desc": "<description>",
+				"claim_10_name": "Light",
+				"claim_11_desc": "<description>",
+				"claim_11_name": "Darkness",
+				"claim_12_desc": "<description>",
+				"claim_12_name": "Darkness",
+				"claim_13_desc": "<description>",
+				"claim_13_name": "neutral",
+				"claim_14_desc": "level 0",
+				"claim_14_name": "Hellstone Claim",
+				"claim_15_desc": "<description>",
+				"claim_15_name": "Light",
+				"claim_bridge_1_2": "0",
+				"claim_bridge_2_7": "0",
+				"claim_bridge_3_4": "0",
+				"claim_bridge_5_10": "0",
+				"claim_bridge_6_11": "0",
+				"claim_bridge_9_14": "0",
+				"claim_bridge_12_13": "0",
+				"claim_bridge_14_15": "0",
+				"crew_xp_condition": "crew_outlaw_posse_xp_condition",
+				"hunting_grounds_type": "modus",
+				"hunting_grounds_description": "INTIMIDATION – SUPERIORITY – SWIFTNESS – SPECTACLE",
+				"cohort1_subtype": "Thugs",
+				"upgrade_21_check_1": "1"
+			},
+			"crewability": ["deadly_serious", "blood_brothers", "straightforward", "fiends", "forged_in_the_fire", "patron", "war_dogs", "veteran"],
+			"upgrade": [{
+				"name": "crew_upgrade_outlaw_rigging",
+				"numboxes": "1"
+			}, {
+				"name": "crew_upgrade_elite_thugs",
+				"numboxes": "1"
+			}, {
+				"name": "crew_upgrade_elite_movers",
+				"numboxes": "1"
+			}, {
+				"name": "crew_upgrade_fine_horses",
+				"numboxes": "1"
+			}, {
+				"name": "crew_upgrade_hardened",
+				"numboxes": "3"
+			}]
+		},
 		"bounty_hunters": {
 			"base": {
 				"claim_1_desc": "<description>",
@@ -62,7 +186,70 @@
 				"name": "crew_upgrade_hardened",
 				"numboxes": "3"
 			}]
-		}
+		},
+		"tribe": {
+			"base": {
+				"claim_1_desc": "<description>",
+				"claim_1_name": "Darkness",
+				"claim_2_desc": "<description>",
+				"claim_2_name": "neutral",
+				"claim_3_desc": "<description>",
+				"claim_3_name": "neutral",
+				"claim_4_desc": "<description>",
+				"claim_4_name": "Light",
+				"claim_5_desc": "<description>",
+				"claim_5_name": "Light",
+				"claim_6_desc": "<description>",
+				"claim_6_name": "Darkness",
+				"claim_7_desc": "level 0",
+				"claim_7_name": "Hellstone Claim",
+				"claim_9_desc": "level 0",
+				"claim_9_name": "Hellstone Claim",
+				"claim_10_desc": "<description>",
+				"claim_10_name": "Light",
+				"claim_11_desc": "<description>",
+				"claim_11_name": "Darkness",
+				"claim_12_desc": "<description>",
+				"claim_12_name": "Darkness",
+				"claim_13_desc": "<description>",
+				"claim_13_name": "neutral",
+				"claim_14_desc": "level 0",
+				"claim_14_name": "Hellstone Claim",
+				"claim_15_desc": "<description>",
+				"claim_15_name": "Light",
+				"claim_bridge_1_2": "0",
+				"claim_bridge_2_7": "0",
+				"claim_bridge_3_4": "0",
+				"claim_bridge_5_10": "0",
+				"claim_bridge_6_11": "0",
+				"claim_bridge_9_14": "0",
+				"claim_bridge_12_13": "0",
+				"claim_bridge_14_15": "0",
+				"crew_description": "crew_tribe_description",
+				"crew_xp_condition": "crew_tribe_xp_condition",
+				"hunting_grounds_type": "modus",
+				"hunting_grounds_description": "SHOW OF FORCE – SWIFTNESS – SOCIAL - SACRIFICE ",
+				"upgrade_3_check_1": "1",
+				"upgrade_20_check_1": "1"
+			},
+			"crewability": ["watchers", "into_the_burning_beyond", "horseback_is_home", "one_with_the_land", "one_with_the_people", "stalkers_of_demons", "theyre_with_us", "veteran"],
+			"upgrade": [{
+				"name": "crew_upgrade_tribe_rigging",
+				"numboxes": "1"
+			}, {
+				"name": "crew_upgrade_elite_scouts",
+				"numboxes": "1"
+			}, {
+				"name": "crew_upgrade_elite_movers",
+				"numboxes": "1"
+			}, {
+				"name": "crew_upgrade_fine_horses",
+				"numboxes": "1"
+			}, {
+				"name": "crew_upgrade_hardened",
+				"numboxes": "3"
+			}]
+		}		
 	},
 	"playbook": {
         "the_fist": {
