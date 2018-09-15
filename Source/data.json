@@ -1,33 +1,771 @@
 {
 	"crew": {
+		"bounty_hunters": {
+			"base": {
+				"claim_1_desc": "<description>",
+				"claim_1_name": "Darkness",
+				"claim_2_desc": "<description>",
+				"claim_2_name": "neutral",
+				"claim_3_desc": "<description>",
+				"claim_3_name": "neutral",
+				"claim_4_desc": "<description>",
+				"claim_4_name": "Light",
+				"claim_5_desc": "<description>",
+				"claim_5_name": "Light",
+				"claim_6_desc": "<description>",
+				"claim_6_name": "Darkness",
+				"claim_7_desc": "level 0",
+				"claim_7_name": "Hellstone Claim",
+				"claim_9_desc": "level 0",
+				"claim_9_name": "Hellstone Claim",
+				"claim_10_desc": "<description>",
+				"claim_10_name": "Light",
+				"claim_11_desc": "<description>",
+				"claim_11_name": "Darkness",
+				"claim_12_desc": "<description>",
+				"claim_12_name": "Darkness",
+				"claim_13_desc": "<description>",
+				"claim_13_name": "neutral",
+				"claim_14_desc": "level 0",
+				"claim_14_name": "Hellstone Claim",
+				"claim_15_desc": "<description>",
+				"claim_15_name": "Light",
+				"claim_bridge_1_2": "0",
+				"claim_bridge_2_7": "0",
+				"claim_bridge_3_4": "0",
+				"claim_bridge_5_10": "0",
+				"claim_bridge_6_11": "0",
+				"claim_bridge_9_14": "0",
+				"claim_bridge_12_13": "0",
+				"claim_bridge_14_15": "0",
+				"crew_description": "crew_bounty_hunters_description",
+				"crew_xp_condition": "crew_bounty_hunters_xp_condition",
+				"hunting_grounds_type": "modus",
+				"hunting_grounds_description": "VIOLENCE – NEGOTIATION – CONNECTION – TRAP",
+				"upgrade_5_check_1": "1",
+				"upgrade_20_check_1": "1"
+			},
+			"crewability": ["bloundhounds", "a_walking_rogues_gallery", "life_line", "an_eye_for_it", "really_useful", "lucky_fellows", "patron", "veteran"],
+			"upgrade": [{
+				"name": "crew_upgrade_bounty_rigging",
+				"numboxes": "1"
+			}, {
+				"name": "crew_upgrade_elite_rooks",
+				"numboxes": "1"
+			}, {
+				"name": "crew_upgrade_elite_scouts",
+				"numboxes": "1"
+			}, {
+				"name": "crew_upgrade_fine_horses",
+				"numboxes": "1"
+			}, {
+				"name": "crew_upgrade_hardened",
+				"numboxes": "3"
+			}]
+		}
 	},
 	"playbook": {
-	},
+        "the_fist": {
+            "ability": ["is_that_all_you_got", "everybodys_kung_fu_fighting", "where_does_that_come_from", "st_anger", "health_is_better_than_wealth", "man_of_honor", "bad_ass_kata", "veteran"],
+            "base": {
+				"sling": "1",
+				"prowl": "1",
+				"brawl": "1",
+				"gatherinfo1": "gatherinfo_how_can_i_hurt_them",
+				"gatherinfo2": "gatherinfo_whos_most_afraid_of_me",
+				"gatherinfo3": "gatherinfo_whos_most_dangerous_here",
+				"gatherinfo4": "gatherinfo_what_do_they_intend_to_do",
+				"gatherinfo5": "gatherinfo_how_can_i_get_them_to_x",
+				"gatherinfo6": "gatherinfo_are_they_telling_the_truth",
+				"playbook_description": "playbook_the_fist_description",
+				"xp_condition": "playbook_the_fist_xp_condition"
+            },
+            "playbookitem": [{
+				"name": "playbook_item_fine_hand_weapon",
+				"description": "playbook_item_fine_hand_weapon_description",
+				"numboxes": "1"
+			}, {
+				"name": "playbook_item_fine_heavy_weapon",
+				"description": "playbook_item_fine_heavy_weapon_description",
+				"numboxes": "2"
+			}, {
+				"name": "playbook_item_scary_weapon_or_tool",
+				"description": "playbook_item_scary_weapon_or_tool_description",
+				"numboxes": "1"
+			}, {
+				"name": "playbook_item_picture_of_a_lost_love",
+				"description": "playbook_item_picture_of_a_lost_love_description",
+				"numboxes": "0"
+			}, {
+				"name": "playbook_item_bottle_of_whiskey",
+				"description": "playbook_item_bottle_of_whiskey_description",
+				"numboxes": "1"
+			}, {
+				"name": "playbook_item_pack_of_bandages",
+				"description": "playbook_item_pack_of_bandages_description",
+				"numboxes": "1"
+			}]
+        },
+        "the_shot": {
+            "ability": ["smoke_and_mirrors", "fancy_dead_eye", "eastwood", "lightning_nerves_of_steal", "silver_bullets", "fill_the_air_with_lead", "stunning_performance", "veteran"],
+            "base": {
+				"sling": "2",
+				"sway": "1",
+				"gatherinfo1": "gatherinfo_where_is_the_critical_point",
+				"gatherinfo2": "gatherinfo_whos_most_impressed_by_me",
+				"gatherinfo3": "gatherinfo_what_do_they_intend_to_do",
+				"gatherinfo4": "gatherinfo_how_can_i_get_them_to_x",
+				"gatherinfo5": "gatherinfo_where_are_they_vulnerable",
+				"gatherinfo6": "gatherinfo_what_do_they_expect",
+				"playbook_description": "playbook_the_shot_description",
+				"xp_condition": "playbook_the_shot_xp_condition"
+            },
+            "playbookitem": [{
+				"name": "playbook_item_fine_and_flashy_pair_of_pistols",
+				"description": "playbook_item_fine_and_flashy_pair_of_pistols_description",
+				"numboxes": "1"
+			}, {
+				"name": "playbook_item_fine_rifle",
+				"description": "playbook_item_fine_rifle_description",
+				"numboxes": "2"
+			}, {
+				"name": "playbook_item_lightning_a_fine_horse",
+				"description": "playbook_item_lightning_a_fine_horse_description",
+				"numboxes": "0"
+			}, {
+				"name": "playbook_item_special_ammunition",
+				"description": "playbook_item_special_ammunition_description",
+				"numboxes": "1"
+			}, {
+				"name": "playbook_item_fine_disguise_kit",
+				"description": "playbook_item_fine_disguise_kit_description",
+				"numboxes": "1"
+			}, {
+				"name": "playbook_item_a_message_from_an_admirer",
+				"description": "playbook_item_a_message_from_an_admirer_description",
+				"numboxes": "0"
+			}]
+        },
+        "the_law": {
+            "ability": ["i_am_the_law", "a_story_to_tell", "this_aint_no_coon_hunt", "ask_what_your_country_can_do_for_you", "s_only_a_flesh_wound", "moral_compass", "tactical_genius", "veteran"],
+            "base": {
+				"hunt": "1",
+				"brawl": "1",
+				"command": "1",
+				"gatherinfo1": "gatherinfo_who_is_really_in_charge_here",
+				"gatherinfo2": "gatherinfo_whos_the_most_lawabiding_here",
+				"gatherinfo3": "gatherinfo_what_do_they_intend_to_do",
+				"gatherinfo4": "gatherinfo_how_can_i_get_them",
+				"gatherinfo5": "gatherinfo_who_should_i_look_out_for",
+				"gatherinfo6": "gatherinfo_how_can_i_hurt_them",
+				"playbook_description": "playbook_the_law_description",
+				"xp_condition": "playbook_the_law_xp_condition"
+            },
+            "playbookitem": [{
+				"name": "playbook_item_fine_pair_of_pistols",
+				"description": "playbook_item_fine_pair_of_pistols_description",
+				"numboxes": "2"
+			}, {
+				"name": "playbook_item_fine_shotgun",
+				"description": "playbook_item_fine_shotgun_description",
+				"numboxes": "2"
+			}, {
+				"name": "playbook_item_badge_of_authority",
+				"description": "playbook_item_badge_of_authority_description",
+				"numboxes": "0"
+			}, {
+				"name": "playbook_item_fine_documents",
+				"description": "playbook_item_fine_documents_description",
+				"numboxes": "1"
+			}, {
+				"name": "playbook_item_manacle_and_chains",
+				"description": "playbook_item_manacle_and_chains_description",
+				"numboxes": "1"
+			}, {
+				"name": "playbook_item_a_keepsake",
+				"description": "playbook_item_a_keepsake_description",
+				"numboxes": "0"
+			}]
+        },
+        "the_gamble": {
+            "ability": ["all_eyes_on_me", "gamblers_gift", "cutting_cards", "heart_of_the_cards", "fight_with_panache", "saloon_swagger", "miss_fortune", "veteran"],
+            "base": {
+				"sling": "1",
+				"consort": "1",
+				"sway": "1",
+				"gatherinfo1": "gatherinfo_are_they_telling_the_truth",
+				"gatherinfo2": "gatherinfo_what_are_they_not_noticing",
+				"gatherinfo3": "gatherinfo_what_do_they_intend_to_do",
+				"gatherinfo4": "gatherinfo_how_can_i_get_them_to_x",
+				"gatherinfo5": "gatherinfo_what_do_they_really_care_about",
+				"gatherinfo6": "gatherinfo_how_can_i_stand_out_here",
+				"playbook_description": "playbook_the_gamble_description",
+				"xp_condition": "playbook_the_gamble_xp_condition"
+            },
+            "playbookitem": [{
+				"name": "playbook_item_fine_extravagant_melee_weapon",
+				"description": "playbook_item_fine_extravagant_melee_weapon_description",
+				"numboxes": "1"
+			}, {
+				"name": "playbook_item_fine_playing_cards_and_dice",
+				"description": "playbook_item_fine_playing_cards_and_dice_description",
+				"numboxes": "0"
+			}, {
+				"name": "playbook_item_fine_clothes_and_jewelry",
+				"description": "playbook_item_badge_of_authority_description",
+				"numboxes": "1"
+			}, {
+				"name": "playbook_item_a_set_of_won_valuable_documents",
+				"description": "playbook_item_a_set_of_won_valuable_documents_description",
+				"numboxes": "1"
+			}, {
+				"name": "playbook_a_fine_story",
+				"description": "playbook_a_fine_story_description",
+				"numboxes": "0"
+			}, {
+				"name": "playbook_item_a_small_token_of_luck",
+				"description": "playbook_item_a_small_token_of_luck_description",
+				"numboxes": "0"
+			}]
+        },
+        "the_scout": {
+            "ability": ["darken_than_the_shadows", "silent_hunter", "survivor", "learned_my_trade_from_the_best", "youre_my_game", "like_a_brother", "see_another_day", "listen_to_the_land", "veteran"],
+            "base": {
+				"hunt": "2",
+				"prowl": "1",
+				"gatherinfo1": "gatherinfo_what_is_the_best_path",
+				"gatherinfo2": "gatherinfo_what_is_hidden_or_lost_here",
+				"gatherinfo3": "gatherinfo_how_where_can_i_discover_x",
+				"gatherinfo4": "gatherinfo_who_what_is_most_dangerous_here",
+				"gatherinfo5": "gatherinfo_who_should_i_look_out_for",
+				"gatherinfo6": "gatherinfo_how_will_the_environment_change",
+				"playbook_description": "playbook_the_scout_description",
+				"xp_condition": "playbook_the_scout_xp_condition"
+            },
+            "playbookitem": [{
+				"name": "playbook_item_fine_hunting_knife",
+				"description": "playbook_item_fine_hunting_knife_description",
+				"numboxes": "1"
+			}, {
+				"name": "playbook_item_fine_rifle_or_bow",
+				"description": "playbook_item_fine_rifle_or_bow_description",
+				"numboxes": "1"
+			}, {
+				"name": "playbook_item_fine_leather_clothes",
+				"description": "playbook_item_fine_leather_clothes_description",
+				"numboxes": "1"
+			}, {
+				"name": "playbook_item_traps",
+				"description": "playbook_item_traps_description",
+				"numboxes": "2"
+			}, {
+				"name": "playbook_item_fine_horse_with_saddle",
+				"description": "playbook_item_fine_horse_with_saddle_description",
+				"numboxes": "0"
+			}, {
+				"name": "playbook_item_outdoor_survival_kit",
+				"description": "playbook_item_outdoor_survival_kit_description",
+				"numboxes": "1"
+			}]
+        },
+        "the_outlaw": {
+            "ability": ["one_of_those_days_again", "now_now_now", "dont_saw_that_coming", "daredevil", "vengeful", "some_fine_reputation", "blaze_of_glory", "veteran"],
+            "base": {
+				"survey": "1",
+				"sling": "1",
+				"brawl": "1",
+				"gatherinfo1": "gatherinfo_where_are_they_it_vulnerable",
+				"gatherinfo2": "gatherinfo_where_should_i_go_flee",
+				"gatherinfo3": "gatherinfo_how_can_i_discover_x",
+				"gatherinfo4": "gatherinfo_who_is_most_dangerous_here",
+				"gatherinfo5": "gatherinfo_what_should_i_look_out_for",
+				"gatherinfo6": "gatherinfo_what_might_happen_if_i_x",
+				"playbook_description": "playbook_the_outlaw_description",
+				"xp_condition": "playbook_the_outlaw_xp_condition"
+            },
+            "playbookitem": [{
+				"name": "playbook_item_a_fine_pistol",
+				"description": "playbook_item_a_fine_pistol_description",
+				"numboxes": "1"
+			}, {
+				"name": "playbook_item_a_fine_rifle_or_shotgun",
+				"description": "playbook_item_fine_rifle_or_bow_description",
+				"numboxes": "1"
+			}, {
+				"name": "playbook_item_a_fine_poncho_or_sombrero",
+				"description": "playbook_item_a_fine_poncho_or_sombrero_description",
+				"numboxes": "1"
+			}, {
+				"name": "playbook_item_a_guitar_case",
+				"description": "playbook_item_a_guitar_case_description",
+				"numboxes": "1"
+			}, {
+				"name": "playbook_item_a_fine_spirit_bane",
+				"description": "playbook_item_a_fine_spirit_bane_description",
+				"numboxes": "0"
+			}, {
+				"name": "playbook_item_a_small_piece_of_hellstone",
+				"description": "playbook_item_a_small_piece_of_hellstone_description",
+				"numboxes": "0"
+			}]
+        },
+        "the_thunderheart": {
+            "ability": ["guided_by_the_totem", "totems_vessel", "protector_of_the_people", "a_devil_with_a_blade", "gruesome_warpaint", "totem_sense", "lone_wolf", "veteran"],
+            "base": {
+				"attune": "1",
+				"survey": "1",
+				"prowl": "1",
+				"gatherinfo1": "gatherinfo_what_happened_here_recently",
+				"gatherinfo2": "gatherinfo_what_do_the_spirits_counsel",
+				"gatherinfo3": "gatherinfo_how_can_i_discover_x",
+				"gatherinfo4": "gatherinfo_how_can_i_get_to_place_x",
+				"gatherinfo5": "gatherinfo_what_should_i_look_out_for",
+				"gatherinfo6": "gatherinfo_where_should_i_strike",
+				"playbook_description": "playbook_the_thunderheart_description",
+				"xp_condition": "playbook_the_thunderheart_xp_condition"
+            },
+            "playbookitem": [{
+				"name": "playbook_item_fine_bow_with_arrows",
+				"description": "playbook_item_fine_bow_with_arrows_description",
+				"numboxes": "1"
+			}, {
+				"name": "playbook_item_fine_weapon",
+				"description": "playbook_item_fine_weapon_description",
+				"numboxes": "1"
+			}, {
+				"name": "playbook_item_spirit_bane_or_charm",
+				"description": "playbook_item_spirit_bane_or_charm_description",
+				"numboxes": "0"
+			}, {
+				"name": "playbook_item_light_climbing_gear",
+				"description": "playbook_item_light_climbing_gear_description",
+				"numboxes": "1"
+			}, {
+				"name": "playbook_item_taboco_poison_medicine",
+				"description": "playbook_item_taboco_poison_medicine_description",
+				"numboxes": "1"
+			}, {
+				"name": "playbook_item_a_totems_gift",
+				"description": "playbook_item_a_totems_gift_description",
+				"numboxes": "1"
+			}]
+        },
+        "the_speaker": {
+            "ability": ["walk_through_the_valley", "shepherd", "a_dogs_nose", "hallow", "curandero", "eli", "premonition", "veteran"],
+            "base": {
+				"read": "1",
+				"attune": "1",
+				"consort": "1",
+				"gatherinfo1": "gatherinfo_what_do_i_covet",
+				"gatherinfo2": "gatherinfo_how_can_i_help_them_confess",
+				"gatherinfo3": "gatherinfo_where_lies_the_corruption",
+				"gatherinfo4": "gatherinfo_what_do_they_intend_to_do",
+				"gatherinfo5": "gatherinfo_what_can_i_trust_them_to_do",
+				"gatherinfo6": "gatherinfo_are_they_telling_the_truth",
+				"playbook_description": "playbook_the_speaker_description",
+				"xp_condition": "playbook_the_speaker_xp_condition"
+            },
+            "playbookitem": [{
+				"name": "playbook_item_symbol_of_your_faith",
+				"description": "playbook_item_symbol_of_your_faith_description",
+				"numboxes": "0"
+			}, {
+				"name": "playbook_item_instrument_of_your_faith",
+				"description": "playbook_item_instrument_of_your_faith_description",
+				"numboxes": "1"
+			}, {
+				"name": "playbook_item_blessed_implements_for_a_ritual",
+				"description": "playbook_item_blessed_implements_for_a_ritual_description",
+				"numboxes": "1"
+			}, {
+				"name": "playbook_item_a_confession_of_old",
+				"description": "playbook_item_a_confession_of_old_description",
+				"numboxes": "0"
+			}, {
+				"name": "playbook_item_fine_garments_of_ceremony",
+				"description": "playbook_item_fine_garments_of_ceremony_description",
+				"numboxes": "1"
+			}, {
+				"name": "playbook_item_concealed_palm_pistol_or_blade",
+				"description": "playbook_item_concealed_palm_pistol_or_blade_description",
+				"numboxes": "1"
+			}]
+        },
+        "the_plan": {
+            "ability": ["god_save_me_from_friends", "foresight", "planning_is_everything", "runs_in_the_family", "weaving_the_web", "old_friends_everywhere", "fingers_in_every_pie", "veteran"],
+            "base": {
+				"read": "1",
+				"consort": "2",
+				"gatherinfo1": "gatherinfo_what_do_they_want_most",
+				"gatherinfo2": "gatherinfo_what_should_i_look_out_for",
+				"gatherinfo3": "gatherinfo_wheres_the_leverage_here",
+				"gatherinfo4": "gatherinfo_how_can_i_get_x",
+				"gatherinfo5": "gatherinfo_what_do_they_intend_to_do",
+				"gatherinfo6": "gatherinfo_how_can_i_get_them_to_x",
+				"playbook_description": "playbook_the_plan_description",
+				"xp_condition": "playbook_the_plan_xp_condition"
+            },
+            "playbookitem": [{
+				"name": "playbook_item_a_concealed_hold_out_pistol",
+				"description": "playbook_item_a_concealed_hold_out_pistol_description",
+				"numboxes": "0"
+			}, {
+				"name": "playbook_item_fine_status_symbol",
+				"description": "playbook_item_fine_status_symbol_description",
+				"numboxes": "1"
+			}, {
+				"name": "playbook_item_fine_documents",
+				"description": "playbook_item_fine_documents_description",
+				"numboxes": "1"
+			}, {
+				"name": "playbook_item_blackmail_information",
+				"description": "playbook_item_blackmail_information_description",
+				"numboxes": "0"
+			}, {
+				"name": "playbook_item_fine_ornamented_carriage",
+				"description": "playbook_item_fine_ornamented_carriage_description",
+				"numboxes": "0"
+			}, {
+				"name": "playbook_item_spirit_charm",
+				"description": "playbook_item_spirit_charm_description",
+				"numboxes": "0"
+			}]
+        },
+        "the_gentle_touch": {
+            "ability": ["snakeoil_miracles", "influential", "little_vultures", "well_travelled", "fandango", "quick_witted", "viper", "in_good_hands", "veteran"],
+            "base": {
+				"read": "2",
+				"consort": "1",
+				"gatherinfo1": "gatherinfo_what_should_i_look_out_for",
+				"gatherinfo2": "gatherinfo_what_do_they_intend_to_do",
+				"gatherinfo3": "gatherinfo_what_is_foreign_or_weird_here",
+				"gatherinfo4": "gatherinfo_how_can_i_ease_their_suffering",
+				"gatherinfo5": "gatherinfo_what_is_hidden_or_lost_here",
+				"gatherinfo6": "gatherinfo_how_can_i_use_to_my_advantage",
+				"playbook_description": "playbook_the_gentle_touch_description",
+				"xp_condition": "playbook_the_gentle_touch_xp_condition"
+            },
+            "playbookitem": [{
+				"name": "playbook_item_fine_concealed_palm_pistol",
+				"description": "playbook_item_fine_concealed_palm_pistol_description",
+				"numboxes": "0"
+			}, {
+				"name": "playbook_item_fine_bedside_manners",
+				"description": "playbook_item_fine_bedside_manners_description",
+				"numboxes": "0"
+			}, {
+				"name": "playbook_item_fine_doctors_bag_and_apron",
+				"description": "playbook_item_fine_doctors_bag_and_apron_description",
+				"numboxes": "2"
+			}, {
+				"name": "playbook_item_fine_and_very_strong_cough_syrup",
+				"description": "playbook_item_fine_and_very_strong_cough_syrup_description",
+				"numboxes": "0"
+			}, {
+				"name": "playbook_item_a_comforting_song",
+				"description": "playbook_item_a_comforting_song_description",
+				"numboxes": "0"
+			}, {
+				"name": "playbook_item_an_old_favor",
+				"description": "playbook_item_an_old_favor_description",
+				"numboxes": "0"
+			}]
+        },
+        "the_wrench_and_saw": {
+            "ability": ["driven", "skillful", "mad_scientist", "spiritmancer", "listening_to_their_voices", "speaking_their_tongue", "blood_sweat_and_gears", "right_time_right_tool", "veteran"],
+            "base": {
+				"craft": "2",
+				"disable": "1",
+				"gatherinfo1": "gatherinfo_what_here_is_talking_to_me",
+				"gatherinfo2": "gatherinfo_how_can_i_get_them_to_x",
+				"gatherinfo3": "gatherinfo_are_they_telling_the_truth",
+				"gatherinfo4": "gatherinfo_what_can_i_improve_here",
+				"gatherinfo5": "gatherinfo_might_happen_if_i_x",
+				"gatherinfo6": "gatherinfo_how_can_i_find_x",
+				"playbook_description": "playbook_the_wrench_and_saw_description",
+				"xp_condition": "playbook_the_wrench_and_saw_xp_condition"
+            },
+            "playbookitem": [{
+				"name": "playbook_item_fine_crafting_tools",
+				"description": "playbook_item_fine_crafting_tools_description",
+				"numboxes": "1"
+			}, {
+				"name": "playbook_item_fine_experimental_rifle",
+				"description": "playbook_item_fine_experimental_rifle_description",
+				"numboxes": "1"
+			}, {
+				"name": "playbook_item_fine_useful_parts",
+				"description": "playbook_item_fine_useful_parts_description",
+				"numboxes": "1"
+			}, {
+				"name": "playbook_item_hellstone_googles",
+				"description": "playbook_item_hellstone_googles_description",
+				"numboxes": "1"
+			}, {
+				"name": "playbook_item_an_unopened_box",
+				"description": "playbook_item_an_unopened_box_description",
+				"numboxes": "1"
+			}, {
+				"name": "playbook_item_a_disturbing_truth",
+				"description": "playbook_item_a_disturbing_truth_description",
+				"numboxes": "0"
+			}]
+        }
+    },
 	"factions": {
+		"factions1": [{
+			"name": "faction_the_8th_us_cavalry",
+			"tier": "IV",
+			"hold": "W",
+			"notes": "Busy fighting native war parties lately and trying to cover lots of coach and train lines to prevent attacks. Not easy for them to come to Mudwater because the tribes are paying serious attention especially if the troop is bigger than a few soldiers. Rumors about getting new supplies from the Capital City, including better weapons & some kind of other 'support'."
+		}, {
+			"name": "faction_ironware_metal_goods",
+			"tier": "III",
+			"hold": "S",
+			"notes": " The top dog of licensed Hellstone mining companies in Mudwater. Grew really quick thanks to the new trade. Some rumors about staff members being corrupt and big chunks of Hellstone slipping through the cracks. Managed by Philomena Standish, the wife of bank director Barnabas Standish."
+		}, {
+			"name": "faction_northern_rail_transport",
+			"tier": "III",
+			"hold": "S",
+			"notes": "The bigger rail company in Mudwater trying to make progress with their railroad connection. Fighting for the exclusive gov’ment contract and quick to complain at Fort Hubert if its trains or workers are attacked."
+		}, {
+			"name": "faction_fells_wargo",
+			"tier": "III",
+			"hold": "W",
+			"notes": "Similar to the Pony Express, all carriages of Fells & Wargo are licensed for deliveries into native territory and Mudwater. Currently a fierce competition with the Express results into several carriages ambushed, missing or lost. People say that the Thunder Raven Tribe is responsible for those incidents with the Pony Express as beneficiary."
+		
+		}, {
+			"name": "faction_horizon_credit_union",
+			"tier": "III",
+			"hold": "W",
+			"notes": "Biggest bank in Mudwater with breathtaking profits through financing Hellstone mines and other daring and high risk enterprises. Director Barnabas P. Standish is father-in-law to Mayor Walter Smith and husband to Philomena Standish. Standish is often seen at the House of Roses for “business activities”."
+		}, {
+			"name": "faction_good_health_association",
+			"tier": "III",
+			"hold": "W",
+			"notes": "Inconspicuous private organization with a solid membership among the prestigious citizens of the city. Public goal is the advancement of the common good: Hardly any event in the city without approval of Good Health. Only the inner circle (calling itself the „Knights of Solomon“) knows the real goal, but no one’s talking and membership of the inner circle is highly exclusive. Some rumors about secret places and rituals in the wild, purpose unknown. Investing into new, weird and unconventional research."
+		}, {
+			"name": "faction_the_thunder_raven_tribe",
+			"tier": "II",
+			"hold": "S",
+			"notes": "One of the bigger local native tribes said to have the strongest and most advanced Hellstone-powered medicine (Ghost Dance). Gray eminence behind Chief Canowicakte is the shaman Kangee. They like to attack under the cover of nightly darkness, often supported by thunderstorm and spirits of nature."
+		}, {
+			"name": "faction_eastwest_rail",
+			"tier": "II",
+			"hold": "S",
+			"notes": "Smaller and more aggressive rail company in Mudwater. Sometimes it seems that it’s more important to them to sabotage Northern Rail & Transport than to make progress with their own tracks. Also fighting for the exclusive gov’ment contract. Headed my Ruth McCoy and also dealing in contraband."
+		}, {
+			"name": "faction_diamond_trust",
+			"tier": "II",
+			"hold": "S",
+			"notes": "Playing the second fiddle as a local bank “The Trust” is taking back seat in financing the secondary businesses like diamonds or gold mines. It’s only a matter of time before Director Arthur Peabody draws on his shady past and some unconventional methods to disturb the family ties between the city and his competition."
+		}, {
+			"name": "faction_the_pony_express",
+			"tier": "II",
+			"hold": "S",
+			"notes": "“The Express” is licensed for deliveries into the native territory and Mudwater. Lately under much pressure from competitor Fells & Wargo, because a single rider can only transport a small amount of Hellstone at a time. They are usually much faster, if the rider don’t vanish or dies from mutation or other cause."
+		}, {
+			"name": "faction_the_twins",
+			"tier": "II",
+			"hold": "S",
+			"notes": "Horatio and Ulysses Jones escaped from state prison only recently and are newcomers in town. Despite their short presence they already built some real clout due to their very aggressive methods. Rumors about them being a gang with 'unholy obligation & payback in hell' are surely exaggerated."
+		}, {
+			"name": "faction_the_inquisition",
+			"tier": "II",
+			"hold": "S",
+			"notes": "They claim to be sent by His Holiness the Pope himself for the salvation of the true believers. And they have a fancy official certificate to prove it. Only the Head Inquisitor “Michael” is known by face and name, all other Inquisitors are always hooded. Is there a terrible secret hidden beneath those hoods? Relationships to town officials, local church and nearly everybody else in Mudwater are tense. Michael may pay bounties for killed demons as long as you can prove the kill somehow."
+		}, {
+			"name": "faction_fine_energy_enterprise",
+			"tier": "II",
+			"hold": "W",
+			"notes": "Second largest Hellstone buyer in Mudwater is “the Enterprise” – headed by John Cusack, brother to Philomena Standish - trying to provide what they think is clean energy for new technology. Very curious about I&MG’s plan about a Hellstone Refinery and more than willing to pay for that kind of information. Investing in new claims and sabotage."
+		}, {
+			"name": "faction_lord_dorian_lockwoodtate",
+			"tier": "II",
+			"hold": "W",
+			"notes": "An English Earl (so it is said) being in the country for wealth and to bring fine arts to the people. That’s what he would say if asked. Rumors have it that he had to leave England with his butler Alfred in a hurry after he hammered a stake into the heart of an alleged vampire / fellow English man. Splendid. May be wealthy, but this is hard to say. Had a run-in recently with the Good Health Association about that Shakespeare performance in the House of Roses."
+		}, {
+			"name": "faction_first_church_of_saint_michael",
+			"tier": "II",
+			"hold": "W",
+			"notes": "Father Ike used to be the will of the Lord until the Inquisition showed up. Has still some clout with the people but his hold is weakened. A notorious drunk he first doesn’t seem to care but lately his sermons tend to focus on false prophets and religious zealots on their way to hell. Especially those calling themselves “Michael”. You got to love his energy!"
+		}, {
+			"name": "faction_the_house_of_roses",
+			"tier": "I",
+			"hold": "S",
+			"notes": "Aunt Polly owns the best whorehouse in town. Young, old, boys, girls? You name it, she got it. She does not only trade in sinful pleasures of the flesh but has a solid side business of dealing in secrets. Many of them are revealed, traded, whitewashed and 'forgotten' in Polly’s house, for a reasonable 'fee' of course. Lately, she prevented a hostile takeover attempt executed by the Wong Family. After some struggle both sides agreed on a peaceful cooperation... for now."
+		}, {
+			"name": "faction_rattlesnake_gang",
+			"tier": "I",
+			"hold": "S",
+			"notes": "The inner circle of the gang consists of family Burns, headed by Edwina Burns since her husband Rufus died approximately a year ago. Edwina is convinced that her husband will be back, not only soon but also alive. That may explain why she’s always in company of a coffin in which the mortal remains of Rufus should rest. Primary mean of the gang to earn money are robberies."
+		}, {
+			"name": "faction_mr_wongs_family_business",
+			"tier": "I",
+			"hold": "S",
+			"notes": "Not only the classic laundry but other “business” as well. At least three generations of Wongs doing their duty in this family business. Head of the family is Wong Cheng, age > 80, who came with his three sons (Fan, Hai and Huang) and their wives into the country. Rumors about mysterious ways like sticking needles into bodies and other blood magic were heard."
+		}, {
+			"name": "faction_the_shadow_valley_gang",
+			"tier": "I",
+			"hold": "S",
+			"notes": "Outlaw posse with hideout somewhere in the Shadow Valley. Rumored to be headed by a group of sisters of unknown origin. The posse is a tight-knit gang committed to absolute secrecy. The fact that a caught member who tried to brag died from spontaneous combustion strengthened the rumor that the gang is also a dark cult. Searching for artefacts lately."
+		}, {
+			"name": "faction_explorers_society",
+			"tier": "I",
+			"hold": "S",
+			"notes": "Wild mixture of east coast professors / scholars and adventurers claiming to explore the mines and caves to find out more about Hellstone and the event which made Hellstone happen. Also known to sell found artefacts on the black market. Buying and hoarding Hellstone for an unknown purpose."
+		}, {
+			"name": "faction_the_black_rider",
+			"tier": "I",
+			"hold": "W",
+			"notes": "Supposedly an undead law man reverted from Hell to take revenge. Who did him wrong is not known, other goals or motives are also unknown. Often accompanied by a native shaman and it’s not always clear whether the Black Rider himself or the shaman is the driving force in this vendetta."
+		}, {
+			"name": "faction_miners_union",
+			"tier": "I",
+			"hold": "W",
+			"notes": "Some desperate souls trying to give the hard working and risk taking men and women in the mines what they deserve. Maybe desperate enough to take some unconventional actions. Headed by Gus Cochran, trying to make up his mind about his Lordship. Waiting for support from the Capital City."
+		}, {
+			"name": "faction_southern_refugees",
+			"tier": "I",
+			"hold": "W",
+			"notes": "Lots of families trying to have a better life here than in down in the South. Fat chance with those all those demons and town folks eying them suspiciously. Very religious and superstitiously. Often divided about what’s right and wrong, much talking and solo efforts by single persons or families."
+		}, {
+			"name": "faction_native_tribes_from_session_one",
+			"tier": "I/II",
+			"hold": "S/W"
+		}]
 	},
 	"actions": {
-		"insight": ["hunt", "study", "survey", "tinker"],
-		"prowess": ["finesse", "prowl", "skirmish", "wreck"],
-		"resolve": ["attune", "command", "consort", "sway"]
+		"insight": ["hunt", "read", "survey", "craft"],
+		"prowess": ["sling", "prowl", "brawl", "disable"],
+		"guts": ["attune", "command", "consort", "sway"]
 	},
 	"traumas": ["cold", "haunted", "obsessed", "paranoid", "reckless", "soft", "unstable", "vicious"],
-	"items": [],
+	"items": [{
+		"name": "a_pistol",
+		"description": "a_pistol_description",
+		"numboxes": "1",
+		"short": "1"
+	}, {
+		"name": "a_2nd_pistol",
+		"description": "a_pistol_description",
+		"numboxes": "1",
+		"short": "2"
+	}, {
+		"name": "a_melee_weapon",
+		"description": "a_melee_weapon_description",
+		"numboxes": "1"
+	}, {
+		"name": "a_second_melee_weapon",
+		"description": "a_melee_weapon_description",
+		"numboxes": "1"
+	}, {
+		"name": "lantern",
+		"description": "lantern_description",
+		"numboxes": "1",
+		"short": "1"
+	}, {
+		"name": "armor",
+		"description": "armor_description",
+		"numboxes": "2",
+		"short": "1"
+	}, {
+		"name": "throwing_knifes",
+		"description": "throwing_knifes_description",
+		"numboxes": "1"
+	}, {
+		"name": "a_large_weapon",
+		"description": "a_large_weapon_description",
+		"numboxes": "2"
+	}, {
+		"name": "an_unusual_weapon",
+		"description": "an_unusual_weapon_description",
+		"numboxes": "1"
+	}, {
+		"name": "a_horse_with_saddle",
+		"description": "a_horse_with_saddle_description",
+		"numboxes": "0"
+	}, {
+		"name": "climbing_gear",
+		"description": "climbing_gear_description",
+		"numboxes": "2"
+	}, {
+		"name": "documents",
+		"description": "documents_description",
+		"numboxes": "1"
+	}, {
+		"name": "arcane_implements",
+		"description": "arcane_implements_description",
+		"numboxes": "1"
+	}, {
+		"name": "subterfuge_supplies",
+		"description": "subterfuge_supplies_description",
+		"numboxes": "1"
+	}, {
+		"name": "demolition_tools",
+		"description": "demolition_tools_description",
+		"numboxes": "2"
+	}, {
+		"name": "crafting_tools",
+		"description": "crafting_tools_description",
+		"numboxes": "1"
+	}, {
+		"name": "a_spirit_bane",
+		"description": "a_spirit_bane_description",
+		"numboxes": "0"
+	}, {
+		"name": "an_useful_item",
+		"description": "an_useful_item_description",
+		"numboxes": "2"
+	}],	
+	
 	"translatedDefaults": {
 		"cohort1_name": "cohort",
-		"contacts_title": "contacts",
+		"contacts_title": "contacts_title",
 		"factions_title": "factions_title",
 		"factions1_header": "factions1",
 		"factions2_header": "factions2",
-		"factions3_header": "factions3",
-		"factions4_header": "factions4",
-		"factions5_header": "factions5",
-		"friends_title": "friends",
+		"friends_title": "contacts_title",
+		"upgrade_1_name": "carriage",
+		"upgrade_1_description": "upgrade_carriage_description",
+		"upgrade_2_name": "hidden",
+		"upgrade_2_description": "upgrade_hidden_description",
+		"upgrade_3_name": "quarters",
+		"upgrade_3_description": "upgrade_quarters_description",
+		"upgrade_4_name": "secure",
+		"upgrade_4_description": "upgrade_secure_description",
+		"upgrade_5_name": "vault",
+		"upgrade_5_description": "upgrade_vault_description",
+		"upgrade_6_name": "workshop",
+		"upgrade_6_description": "upgrade_workshop_description",
+		"upgrade_7_name": "escape_tunnel",
+		"upgrade_7_description": "upgrade_escape_tunnel_description",
+		"upgrade_8_name": "hellstone_storage",
+		"upgrade_8_description": "upgrade_hellstone_storage_description",
+		"upgrade_9_name": "rail_connection",
+		"upgrade_9_description": "upgrade_rail_connection_description",
+		"upgrade_10_name": "documents",
+		"upgrade_10_description": "upgrade_documents_description",
+		"upgrade_11_name": "gear",
+		"upgrade_11_description": "upgrade_gear_description",
+		"upgrade_12_name": "implements",
+		"upgrade_12_description": "upgrade_implements_description",
+		"upgrade_13_name": "supplies",
+		"upgrade_13_description": "upgrade_supplies_description",
+		"upgrade_14_name": "weapons",
+		"upgrade_14_description": "upgrade_weapons_description",		
+		"upgrade_15_name": "tools",
+		"upgrade_15_description": "upgrade_tools_description",		
+		"upgrade_16_name": "horses",
+		"upgrade_16_description": "upgrade_horses_description",		
+		"upgrade_17_name": "hellstone",
+		"upgrade_17_description": "upgrade_hellstone_description",		
 		"upgrade_20_name": "insight",
 		"upgrade_20_description": "upgrade_insight_description",
 		"upgrade_21_name": "prowess",
 		"upgrade_21_description": "upgrade_prowess_description",
-		"upgrade_22_name": "resolve",
-		"upgrade_22_description": "upgrade_resolve_description",
+		"upgrade_22_name": "guts",
+		"upgrade_22_description": "upgrade_guts_description",
 		"upgrade_23_name": "personal",
 		"upgrade_23_description": "upgrade_personal_description",
 		"upgrade_24_name": "mastery",
@@ -37,21 +775,22 @@
 	},
 	"defaultValues": {
 		"attune": "0",
+		"brawl": "0",
 		"command": "0",
 		"consort": "0",
-		"finesse": "0",
+		"disable": "0",
+		"craft": "0",
 		"hunt": "0",
 		"prowl": "0",
-		"skirmish": "0",
-		"study": "0",
+		"read": "0",
+		"sling": "0",
 		"survey": "0",
-		"sway": "0",
-		"tinker": "0",
-		"wreck": "0"
+		"sway": "0"
 	},
-	"maxFriendsPerPlaybook": 5,
+	"maxFriendsPerPlaybook": 6,
 	"maxContactsPerCrew": 6,
 	"friendlessPlaybooks": [],
 	"translatedCrewAttributes": ["crew_description", "crew_xp_condition"],
-	"translatedPlaybookAttributes": ["friends_title", "gatherinfo1", "gatherinfo2", "gatherinfo3", "gatherinfo4", "gatherinfo5", "gatherinfo6", "playbook_description","xp_condition"]
+	"translatedPlaybookAttributes": ["playbook_description", "xp_condition", 
+									"gatherinfo1", "gatherinfo2", "gatherinfo3", "gatherinfo4", "gatherinfo5", "gatherinfo6"]
 }

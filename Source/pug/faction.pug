@@ -13,6 +13,22 @@ mixin makefactions(number, title)
 			+number-input('status').faction-status
 			+textarea('notes')(data-i18n-placeholder='faction_notes')
 
+mixin makelocations
+	.specialheader.label(data-i18n='locations_header1')
+	fieldset(class=`repeating_locations`)
+		.locationcard
+			+text-input('location-name')(data-i18n-placeholder='Location Name')
+			+textarea('notes')(data-i18n-placeholder='Location Notes')
+			.location-stats-row
+				label(data-i18n='wealth')
+				+number-input(`wealth`)
+				label(data-i18n='law_order')
+				+number-input(`law_order`)
+				label(data-i18n='outlaw_chaos')
+				+number-input(`outlaw_chaos`)
+				label(data-i18n='supernatural')
+				+number-input(`supernatural`)
+
 // Faction Sheet
 +hidden-input('setting_clocks_only')(value='0').input-clocks-only
 .type-faction.flex-wrap
@@ -23,15 +39,10 @@ mixin makefactions(number, title)
 			+checkbox('generate_factions')(data-i18n='generate_factions')
 		+fortuneroll('Fortune_faction', '{{fortune=1}} {{title=^{fortune}}} {{short=1}} {{charname=}}', true)(data-i18n='roll_fortune').fortunebutton.borderbutton
 	.factions.flex.free-repcontrol
-		.col24b
+		.col33
 			+makefactions(1, 'factions1')
-		.col24b
+		.col30
 			+makefactions(2, 'factions2')
-		.col24b
-			+makefactions(3, 'factions3')
-			+makefactions(4, 'factions4').sheet-def-margin
-		.col24b
-			+makefactions(5, 'factions5')
 			.warblurb.def-margin
 				.label(data-i18n='war')
 				ul
@@ -40,6 +51,8 @@ mixin makefactions(number, title)
 					li(data-i18n='warblurb3')
 					li(data-i18n='warblurb4')
 					li(data-i18n='warblurb5')
+		.col36
+			+makelocations
 	.clocks.col55.free-repcontrol
 		.specialheader.label(data-i18n='clocks')
 		fieldset.repeating_factionclock

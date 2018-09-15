@@ -2,19 +2,28 @@
 $lightest: #d8d8d8;
 $lighter: #c7c7c7;
 $darkgrey: #b4b4b4;
-$versiongrey: #aaa;
+$versiongrey: #555;
 $greyborder: #8c8c8c;
 $headergrey: #808080;
 $lightblack: #777;
 $lighterblack: #555;
 $fontblack: #333;
 
-/* red */
-$redtext: #c43c35;
+/* dd-color scheme */
+$dd-light: #fff6f6;
+$dd-grey: #a19393;
+$dd-black: #0e0c0c;
+$dd-red: #be1515;
+$dd-darkred: #8d1411;
+$clock-red: $dd-darkred;
+
+$dd-transpwhite: rgba(255, 255, 255, 0.3);
+
 
 /* GENERALITIES */
 .charsheet {
-	color: $fontblack;
+	background: url('https://www.dropbox.com/s/73ke7x0upgx98jd/A4_BW_Parchment.jpg?raw=1');
+	color: $dd-black;
 	font-size: 0;
 	position: relative;
 	top: -11px;
@@ -22,7 +31,7 @@ $redtext: #c43c35;
 	cursor: default;
 	box-sizing: border-box;
 	padding: 0 !important;
-	font-family: Georgia, "Bitstream Charter", "Times New Roman", serif;
+	font-family: Georgia, "Times New Roman", serif;
 
 	div, span, textarea, ul, li, span, label {
 		box-sizing: border-box;
@@ -47,7 +56,7 @@ $redtext: #c43c35;
 		padding: 0;
 		display: flex;
 		width: auto;
-		color: $fontblack;
+		color: $dd-black;
 		font: inherit;
 
 		input[type=checkbox], input[type=radio] {
@@ -69,7 +78,7 @@ $redtext: #c43c35;
 		width: 100%;
 		padding: 0;
 		margin: 0;
-		color: $fontblack;
+		color: $dd-red;
 		border-radius: 0;
 		transition: all 0.2s, height 0.4s;
 	}
@@ -84,7 +93,7 @@ $redtext: #c43c35;
 
 	input[type=number] {
 		border-color: $lighter;
-		color: $fontblack;
+		color: $dd-red;
 		box-shadow: none;
 	}
 
@@ -164,9 +173,10 @@ $redtext: #c43c35;
 		height: 20px;
 		font-size: 16px;
 		font-family: pictos;
+		color: $dd-black;
 		input {
 			+ span {
-				opacity: 0.3;
+				opacity: 0.4;
 			}
 			&:checked + span {
 				opacity: 1;
@@ -185,7 +195,7 @@ $redtext: #c43c35;
 	justify-content: center;
 	width: 170px;
 	font-size: 11px;
-	color: $lighterblack;
+	color: $dd-black;
 
 	input {
 		position: absolute;
@@ -193,13 +203,39 @@ $redtext: #c43c35;
 		height: 20px;
 	}
 	&:hover {
-		color: red;
+		color: $dd-darkred;
 	}
 	.sheet-3waybox:not(:checked) + .sheet-3waybox,
 	input[value="character"]:not(:checked) ~ span[data-i18n="character_mode"],
 	input[value="crew"]:not(:checked) ~ span[data-i18n="crew_mode"],
 	input[value="faction"][type=radio]:not(:checked) ~ span[data-i18n="faction_mode"] {
 		display: none;
+	}
+}
+
+.sheet-coin-selector {
+	background: transparent;
+	font-size: 17px;
+	color: $dd-black;
+
+	input {
+		position: absolute;
+		width: 170px;
+		height: 20px;
+	}
+	&:hover {
+		color: $dd-darkred;
+	}
+	.sheet-coinbox:not(:checked) + .sheet-coinbox,
+	input[value="zero"]:not(:checked) ~ span[data-i18n="zero_mode"],
+	input[value="coin"]:not(:checked) ~ span[data-i18n="coin_mode"],
+	input[value="hellstone"][type=radio]:not(:checked) ~ span[data-i18n="hellstone_mode"] {
+		display: none;
+	}
+	
+	input[value="coin"]:checked ~ span[data-i18n="coin_mode"],
+	input[value="hellstone"]:checked ~ span[data-i18n="hellstone_mode"] {
+		color: $dd-darkred;
 	}
 }
 /* SETTINGS */
@@ -288,13 +324,16 @@ $redtext: #c43c35;
 /* Sheet container */
 .sheet-container {
 	position: relative;
+	padding-left: 5px;
+	padding-top: 3px;
+	padding-bottom: 5px;
 }
 .sheet-flexwidth {
 	&[value="0"] ~ .sheet-container {
-		width: 860px;
+		width: 840px;
 	}
 	&[value="1"] ~ .sheet-container {
-		min-width: 860px;
+		min-width: 840px;
 		max-width: 1190px;
 	}
 }
@@ -307,7 +346,9 @@ $redtext: #c43c35;
 }
 /* USEFUL GENERAL LAYOUT*/
 .sheet-blackheader {
-	background: black;
+	//background: black;
+	background-image: url('https://www.dropbox.com/s/pata0efmnkn5yil/mE_myOwnPaperStrips01-2.png?raw=1');
+    background-repeat: round;
 	color: white;
 	&.sheet-rep1, &.sheet-hold1 {
 		padding-top: 3px;
@@ -318,8 +359,8 @@ $redtext: #c43c35;
 	}
 }
 .sheet-blackheader, .sheet-black-on-grey, .sheet-greyheader {
-	font-size: 11px;
-	letter-spacing: 1px;
+	font-size: 10px;
+	letter-spacing: 0px;
 }
 .sheet-blackheader, .sheet-greyheader {
 	height: 16px;
@@ -336,7 +377,7 @@ $redtext: #c43c35;
 	padding-left: 1px;
 	height: 13px;
 	line-height: 13px;
-	z-index: -1;
+	//z-index: -1;
 }
 .sheet-plainheader {
 	width: 100%;
@@ -345,12 +386,16 @@ $redtext: #c43c35;
 	line-height: 22px;
 }
 .sheet-specialheader {
-	background: $darkgrey;
+	//background: $dd-black;
+	background-image: url('https://www.dropbox.com/s/pata0efmnkn5yil/mE_myOwnPaperStrips01-2.png?raw=1');
+    background-repeat: round;
+	transform: rotate(1deg);	
+	color: $dd-light;
 	height: 20px;
 	font-size: 11px;
 	line-height: 20px;
 	letter-spacing: 1px;
-	padding: 0 5px;
+	padding: 0 15px;
 	input[type=text] {
 		margin: 0 -5px;
 		padding: 0 5px;
@@ -406,17 +451,32 @@ $redtext: #c43c35;
 .sheet-right-column {
 	padding-left: 5px;
 }
-.sheet-col47 {
-	width: 47%
+.sheet-col20 {
+	width: 20%;
 }
-.sheet-col53 {
-	width: 53%;
+.sheet-col24b {
+	width: 24.25%;
+}
+.sheet-col30 {
+	width: 30%;
+}
+.sheet-col33 {
+	width: 33%;
+}
+.sheet-col36 {
+	width: 36%;
 }
 .sheet-col37 {
 	width: 37%;
 }
-.sheet-col24b {
-	width: 24.25%;
+.sheet-col40 {
+	width: 40%;
+}
+.sheet-col45{
+	width: 45%;
+}
+.sheet-col47 {
+	width: 47%
 }
 .sheet-col50 {
 	width: 50%;
@@ -424,11 +484,14 @@ $redtext: #c43c35;
 .sheet-col52b {
 	width: 52%;
 }
+.sheet-col53 {
+	width: 53%;
+}
 .sheet-col55 {
 	width: 55%;
 }
-.sheet-col45{
-	width: 45%;
+.sheet-col60 {
+	width: 60%;
 }
 .sheet-col63 {
 	width: 63%;
@@ -478,8 +541,8 @@ textarea.sheet-smallcaps {
 	content: ": ";
 }
 .sheet-planningdesc {
-	font-size: 12px;
-	line-height: 15px;
+	font-size: 11px;
+	line-height: 13px;
 	text-align: justify;
 	margin: 0 5% 5px 0;
 }
@@ -494,13 +557,14 @@ textarea.sheet-smallcaps {
 	flex-grow: 1;
 }
 .sheet-playbookitems {
-	background: $lightest;
+	background: $dd-transpwhite;
 }
 .sheet-regularitems {
 	.repcontainer {
 		display: flex;
 		flex-wrap: wrap;
 		align-content: flex-start;
+		background: $dd-transpwhite;
 	}
 	.repitem {
 		display: flex;
@@ -518,6 +582,7 @@ textarea.sheet-smallcaps {
 	align-items: start;
 
 	.sheet-itemname {
+		color: $dd-black;
 		height: 18px;
 		font-size: 11px;
 		margin: 0 1px 0 2px;
@@ -561,6 +626,7 @@ textarea.sheet-smallcaps {
 		margin-top: 3px;
 	}
 }
+
 .sheet-floatingbar {
 	width: 3px;
 	height: 2px;
@@ -632,7 +698,7 @@ textarea.sheet-smallcaps {
 .sheet-bladeslogo {
 	border-right: 12px solid transparent;
 	height: 43px;
-	background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Blades%20in%20the%20Dark/Assets/logo.png');
+	background-image: url("https://www.dropbox.com/s/1qnj7hcfm1dpdha/aFistfulOfDarkness_Logo_horizontal_grunged.png?raw=1");
 	background-size: 102% auto;
 	background-repeat: no-repeat;
 }
@@ -658,6 +724,7 @@ textarea.sheet-smallcaps {
 	font-style: italic;
 	margin-left: auto;
 	text-transform: lowercase;
+	color: $dd-black;
 }
 .sheet-loadnumber {
 	font-weight: bold;
@@ -676,16 +743,17 @@ textarea.sheet-smallcaps {
 		margin-left: auto;
 		input[type=checkbox] + span {
 			opacity: 1;
-			color: $fontblack;
+			color: $dd-black;
 		}
 		&:hover input[type=checkbox] + span {
-			color: red;
+			color: $dd-grey;
 		}
 	}
 }
 /* ADVANCEMENT BOX*/
 .sheet-advancement-header {
-	letter-spacing: 2px;
+	padding-left: 20px;
+	letter-spacing: 0px;
 }
 .sheet-markxp {
 	margin-right: auto;
@@ -697,8 +765,8 @@ textarea.sheet-smallcaps {
 }
 .sheet-advancement-desc, .sheet-warblurb {
 	li {
-		font-size: 13px;
-		line-height: 16px;
+		font-size: 12px;
+		line-height: 14px;
 		width: 100%;
 		&.sheet-nondot {
 			padding-left: 0;
@@ -711,8 +779,8 @@ textarea.sheet-smallcaps {
 }
 .sheet-advancement-desc {
 	width: 99%;
-	background: $lightest;
 	padding: 15px 10px 4px 11px;
+	color: $dd-black;
 	li {
 		font-style: italic;
 		margin-bottom: 1em;
@@ -731,22 +799,22 @@ textarea.sheet-smallcaps {
 	background: $lightest;
 	input[type=text] {
 		flex: 0 0 auto;
-		margin: 0 2px;
-		padding-left: 5px;
+		margin: 0 1px;
+		padding-left: 3px;
 		letter-spacing: -1px;
-		font-size: 35px;
+		font-size: 24px;
 		line-height: 40px;
 	}
 	textarea {
 		height: 42px;
 		flex: 0 0 auto;
-		font-size: 10px;
-		padding-left: 3px;
+		font-size: 9px;
+		padding-left: 1px;
 		letter-spacing: 1px;
 		color: $headergrey;
 		resize: none;
 		overflow: hidden;
-		line-height: 14px;
+		line-height: 12px;
 	}
 	.sheet-reminder {
 		position: absolute;
@@ -761,20 +829,24 @@ textarea.sheet-smallcaps {
 		padding: 3px;
 	}
 }
+
 .sheet-type-character .sheet-playbook {
 	input[type=text] {
-		width: calc(64% - 10px);
+		width: calc(75% - 10px);
 	}
 	textarea {
-		width: calc(36% + 6px);
+		width: calc(25% + 6px);
+		text-align: center;
 	}
 }
 .sheet-type-crew .sheet-playbook {
 	input[type=text] {
-		width: calc(74% - 7px);
+		//width: calc(74% - 7px);
+		width: calc(100% - 2 px);
 	}
 	textarea {
-		width: calc(26% + 3px);
+		//width: calc(26% + 3px);
+		width: calc(0%);
 	}
 }
 
@@ -794,7 +866,7 @@ textarea.sheet-smallcaps {
 		padding: 3px 0 0 2px;
 		margin: 3px 0 0;
 		min-height: 22px;
-		color: $redtext;
+		color: $dd-red;
 	}
 	input[type="hidden"] {
 		&[value=""] + div > .sheet-title::after {
@@ -1222,7 +1294,7 @@ textarea.sheet-smallcaps {
 .sheet-text-button {
 	font-weight: bold;
 	input:checked + span {
-		color: red;
+		color: $dd-darkred;
 	}
 }
 .sheet-size-choice > .sheet-text-button {
@@ -1265,27 +1337,27 @@ input.sheet-tooth {
 	opacity: 0.7;
 }
 .sheet-xptooth + span {
-	background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Blades%20in%20the%20Dark/Assets/teeth/xptooth-red.png');
+	background-image: url('https://www.dropbox.com/s/h4e97xubsdhdo0s/xptooth-red.png?raw=1');
 	margin-right: 4px;
 }
 .sheet-tooth:checked ~ .sheet-xptooth + span {
-	background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Blades%20in%20the%20Dark/Assets/teeth/xptooth-white.png');
+	background-image: url('https://www.dropbox.com/s/kwmkrf39bjewwvz/xptooth-white.png?raw=1');
 }
 .sheet-stresstooth[type=radio] + span,
 .sheet-stresstooth[type=checkbox]:checked + span,
 .sheet-holdtooth:checked + span {
-	background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Blades%20in%20the%20Dark/Assets/teeth/stresstooth-red.png');
+	background-image: url('https://www.dropbox.com/s/2fgk973ji5gckhr/stresstooth-red.png?raw=1');
 }
 .sheet-stresstooth[type=checkbox] + span,
 .sheet-tooth:checked ~ .sheet-stresstooth[type=radio] + span,
 .sheet-holdtooth + span {
-	background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Blades%20in%20the%20Dark/Assets/teeth/stresstooth-white.png');
+	background-image: url('https://www.dropbox.com/s/kecon36tg77sabv/stresstooth-white.png?raw=1');
 }
 .sheet-regulartooth + span {
-	background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Blades%20in%20the%20Dark/Assets/teeth/shorttooth-red.png');
+	background-image: url('https://www.dropbox.com/s/9lxyjraycuij5j3/shorttooth-red.png?raw=1');
 }
 .sheet-tooth:checked ~ .sheet-regulartooth + span {
-	background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Blades%20in%20the%20Dark/Assets/teeth/shorttooth-grey.png');
+	background-image: url('https://www.dropbox.com/s/vwadbbosvhzkzcl/shorttooth-grey.png?raw=1');
 }
 input.sheet-zero {
 	width: 13px;
@@ -1358,10 +1430,10 @@ input.sheet-zero {
 .sheet-turf-input[value="4"] ~ input[type=radio].sheet-turf4 + span,
 .sheet-turf-input[value="5"] ~ input[type=radio].sheet-turf5 + span,
 .sheet-turf-input[value="6"] ~ input[type=radio].sheet-turf6 + span {
-	background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Blades%20in%20the%20Dark/Assets/teeth/stresstooth-black.png');
+	background-image: url('https://www.dropbox.com/s/5u07iauquhen566/stresstooth-black.png?raw=1');
 }
 .sheet-tooth:checked ~ .sheet-stresstooth.sheet-turf6 + span {
-	background-image: url('https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Blades%20in%20the%20Dark/Assets/teeth/stresstooth-halfgrey.png');
+	background-image: url('https://www.dropbox.com/s/lisy5xwuo0p40ax/stresstooth-halfgrey.png?raw=1');
 }
 /* SPECIAL ABILITIES*/
 .sheet-specialability,
@@ -1372,6 +1444,7 @@ input.sheet-zero {
 }
 .sheet-specialability {
 	padding: 4px;
+	color: $dd-black;
 }
 .sheet-friend-contact {
 	padding: 6px 4px;
@@ -1457,7 +1530,7 @@ input.sheet-zero {
 	textarea {
 		font-size: 12px;
 		padding: 10px 4px 3px;
-		color: $redtext;
+		color: $dd-red;
 		overflow: hidden;
 		height: 52px;
 		resize: none;
@@ -1483,6 +1556,7 @@ input.sheet-zero {
 		text-align: center;
 		font-style: italic;
 		font-size: 9px;
+		color: $dd-grey;
 	}
 	.sheet-clock-container {
 		margin: 0 auto;
@@ -1495,13 +1569,14 @@ input.sheet-zero {
 		font-size: 11px;
 		text-align: center;
 		line-height: 18px;
+		color: $dd-black;
 	}
 	.sheet-label {
 		flex-grow: 1;
 		order: 1;
 	}
 	input:checked ~ span {
-		color: red;
+		color: $dd-darkred;
 	}
 	.sheet-checkbox + span {
 		border: 1px solid black;
@@ -1513,6 +1588,7 @@ input.sheet-zero {
 .sheet-coin-and-stash {
 	width: 96%;
 	margin: 1px 0 0 4%;
+	color: $dd-black;
 }
 .sheet-coinrow .sheet-label {
 	font-size: 11px;
@@ -1597,18 +1673,20 @@ input.sheet-zero {
 .sheet-radiobox:last-of-type + span {
 	margin-right: 0;
 }
+
 .sheet-coin, .sheet-crewcoin {
 	.sheet-radiobox + span {
-		background: red;
+		background: $dd-darkred;
 		border: 1px solid black;
 	}
 	input:checked ~ .sheet-radiobox + span {
 		background: white;
 	}
 }
+
 .sheet-stash {
 	.sheet-radiobox + span {
-		background: black;
+		background: $dd-darkred;
 		margin-right: calc((100% - 126px)/9);
 	}
 	input:checked ~ .sheet-radiobox + span {
@@ -1623,6 +1701,7 @@ input.sheet-zero {
 		width: 14px;
 		height: 14px;
 		border: 1px solid black;
+		background: $dd-darkred;
 		margin-left: 3px;
 		margin-right: 0;
 		position:relative;
@@ -1661,6 +1740,10 @@ input.sheet-zero {
 	line-height: 14px;
 	text-align: center;
 }
+.gap {
+	margin-bottom: 1px;
+}
+
 /* REPEATING SECTION CONTROLS */
 /* REPEATING SECTION CONTROLS */
 .repcontrol {
@@ -1720,6 +1803,7 @@ input.sheet-zero {
 .sheet-stress2 {
 	flex: 2 1 136px;
 	position: relative;
+	padding: 0px 8px 0px 3px; 
 }
 .sheet-stress3 {
 	flex: 1 0 68px;
@@ -1736,9 +1820,14 @@ input.sheet-zero {
 	}
 }
 .sheet-traumaholder, .sheet-wantedholder {
+	margin-top: -1px;
 	height: 13px;
 	padding-left: 2px;
 }
+.sheet-traumaholder {
+	padding-right: 10px;
+}
+
 .sheet-rep1 {
 	width: 33px;
 }
@@ -1792,18 +1881,30 @@ input.sheet-zero {
 /* NOTES */
 .sheet-notes {
 	margin-left: 1%;
-	font-family: "Shadows Into Light", cursive;
-	color: $redtext;
-	font-size: 20px;
+	font-family: "Arial, Helvetica, sans-serif";
+	color: $dd-red;
+	font-size: 14px;
 	width: 98%;
 	background: linear-gradient(transparent 26px,#a7a7a7 1px) 0 0 / 100% 27px;
-	line-height: 27px;
+	line-height: 25px;
 	height: 378px;
 	min-height: 378px;
 }
+.sheet-type-character {
+	background-image: url('https://www.dropbox.com/s/5nyoafzxl5irlob/splatter1.png?raw=1');
+    background-repeat: no-repeat;
+}
+.sheet-type-crew {
+	background-image: url('https://www.dropbox.com/s/6bye7xnoqjjc509/splatter2.png?raw=1');
+    background-repeat: no-repeat;
+}
+.sheet-type-faction {
+	background-image: url('https://www.dropbox.com/s/e132v6oigfucpi6/splatter3.png?raw=1');
+    background-repeat: no-repeat;
+}
 .sheet-type-character, .sheet-type-crew {
 	.sheet-notes {
-	margin-top: 15px;
+		margin-top: 15px;
 	}
 }
 /* LOAD CHECKBOXES */
@@ -1835,7 +1936,6 @@ button[type=roll].sheet-rollbutton {
 }
 .sheet-coinrow button[type=roll].sheet-rollbutton {
 	font-size: 11px;
-	color: $lightblack;
 }
 .sheet-blackheader button[type=roll].sheet-rollbutton {
 	margin:auto;
@@ -1852,7 +1952,7 @@ button[type=roll].sheet-vicebutton {
 	padding: 4px;
 }
 button[type=roll].sheet-fortunebutton {
-	width: 100%;
+	width: 95%;
 	height: 30px;
 	margin: 10px 0 0;
 }
@@ -1867,7 +1967,7 @@ button[type=roll].sheet-engagementbutton {
 	margin: 10px 10px 0;
 }
 button[type=roll].sheet-rollbutton:hover {
-	color: red;
+	color: $dd-darkred;
 }
 button[type=roll].sheet-borderbutton:hover {
 	color: black;
@@ -1886,7 +1986,7 @@ input.sheet-checkbox, .sheet-checkbox + span {
 	border: 1px solid $greyborder;
 }
 .sheet-checkbox:checked + span {
-	background: red;
+	background: $dd-darkred;
 }
 .sheet-checkbox:hover + span {
 	opacity: 0.7;
@@ -1914,13 +2014,13 @@ input.sheet-checkbox.sheet-squarebox-small, .sheet-checkbox.sheet-squarebox-smal
 	height: 100%;
 }
 .sheet-claimbridge input:checked + span {
-	background: $lightest;
+	background: $dd-grey;
 }
 /* Change text colour when boxes are checked*/
 .sheet-specialability .sheet-checkbox:checked ~ .sheet-abilityname,
 .sheet-item .sheet-checkbox:checked ~ .sheet-itemname,
 .sheet-friend .sheet-friendstate[value="up"] ~ .sheet-auto-expand {
-	color: red;
+	color: $dd-darkred;
 }
 .sheet-friend-contact .sheet-friendstate:not([value="0"]) ~ .sheet-auto-expand {
 	font-weight: bold;
@@ -1950,7 +2050,7 @@ input.sheet-checkbox.sheet-squarebox-small, .sheet-checkbox.sheet-squarebox-smal
 }
 /* Fake radios */
 .sheet-checkbox.sheet-fakeradio + span {
-	background: red;
+	background: $dd-darkred;
 }
 .sheet-action .sheet-fakeradio:checked ~ .sheet-fakeradio + span {
 	background: $lighter;
@@ -1981,7 +2081,7 @@ input.sheet-checkbox.sheet-squarebox-small, .sheet-checkbox.sheet-squarebox-smal
 			border-bottom-color: white;
 		}
 		.sheet-checkbox:checked + span {
-			border-bottom-color: red;
+			border-bottom-color: $dd-darkred;
 		}
 	}
 	&.sheet-down {
@@ -2006,16 +2106,25 @@ input.sheet-checkbox.sheet-squarebox-small, .sheet-checkbox.sheet-squarebox-smal
 	}
 }
 /* ACTION RATINGS */
-.sheet-attribute,
+.sheet-attribute {
+	background-image: url('https://www.dropbox.com/s/djqhe4wooshpz5n/FoD_PokerCard1.png?raw=1');
+    background-repeat: no-repeat;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	margin-bottom: -10px;
+}
 .sheet-cohort {
 	margin-bottom: 10px;
 }
+
 .sheet-attribute-title,
 .sheet-cohort-title {
 	height: 21px;
 	line-height: 21px;
 	color: white;
-	background: black;
+	background-image: url('https://www.dropbox.com/s/pata0efmnkn5yil/mE_myOwnPaperStrips01-1.png?raw=1');
+    background-repeat: round;
+	//background: white;
 	padding: 0 3px;
 	align-items: center;
 	justify-content: space-between;
@@ -2092,7 +2201,7 @@ input.sheet-checkbox.sheet-squarebox-small, .sheet-checkbox.sheet-squarebox-smal
 .sheet-cohort-condition-name {
 	font-size: 7.5px;
 	margin-right: 2px;
-	z-index: -1;
+	z-index: 0;
 }
 .sheet-cohort-dropdown {
 	background: black;
@@ -2117,7 +2226,7 @@ input.sheet-checkbox.sheet-squarebox-small, .sheet-checkbox.sheet-squarebox-smal
 		height: 13px;
 		z-index: 10;
 		&:checked + span {
-			color: red;
+			color: $dd-darkred;
 		}
 	}
 }
@@ -2153,7 +2262,9 @@ input.sheet-checkbox.sheet-squarebox-small, .sheet-checkbox.sheet-squarebox-smal
 		flex: 0 0 auto;
 	}
 }
-.sheet-claimbox,
+.sheet-claimbox-light,
+.sheet-claimbox-neutral,
+.sheet-claimbox-darkness,
 .sheet-lairbox {
 	height: 66px;
 }
@@ -2162,11 +2273,12 @@ input.sheet-checkbox.sheet-squarebox-small, .sheet-checkbox.sheet-squarebox-smal
 	justify-content: space-between;
 }
 .sheet-lairbox {
-	background: $lightblack;
+	background: $dd-darkred;
 	width: 18.4%;
 	font-size: 13px;
-	color: white;
+	color: $dd-light;
 	letter-spacing: 1px;
+	box-shadow: 1px 1px 3px $dd-black;
 }
 .sheet-claims-horisep {
 	height: 12px;
@@ -2178,11 +2290,13 @@ input.sheet-checkbox.sheet-squarebox-small, .sheet-checkbox.sheet-squarebox-smal
 	width: 12px;
 	margin: 0 calc(9.2% - 6px);
 }
-.sheet-claimbox {
-	background: $lightest;
+.sheet-claimbox-neutral,
+.sheet-claimbox-light,
+.sheet-claimbox-darkness {
 	width: 18.4%;
 	position: relative;
 	transition: all 0.2s;
+	
 	.sheet-label {
 		height: 30px;
 		padding: 4px 0 2px;
@@ -2204,8 +2318,28 @@ input.sheet-checkbox.sheet-squarebox-small, .sheet-checkbox.sheet-squarebox-smal
 		left: 1px;
 	}
 }
-input[value="1"] + .sheet-claimbox {
-	background: $lighter;
+.sheet-claimbox-neutral {
+	background: $dd-grey;
+	background-image: url('https://www.dropbox.com/s/39hblxktkx6drol/box1.png?raw=1');
+    background-repeat: round;
+}
+.sheet-claimbox-light {
+	background: $dd-light;
+	background-image: url('https://www.dropbox.com/s/39hblxktkx6drol/box1.png?raw=1');
+    background-repeat: round;
+}
+.sheet-claimbox-darkness {
+	background: $dd-black;
+	background-image: url('https://www.dropbox.com/s/39hblxktkx6drol/box1.png?raw=1');
+    background-repeat: round;
+}
+
+input[value="1"] + .sheet-claimbox-light,
+input[value="1"] + .sheet-claimbox-neutral,
+input[value="1"] + .sheet-claimbox-darkness {
+	border:1px solid $dd-red;
+	box-shadow: 1px 1px 3px $dd-black;
+	//background: lighten($dd-red, 40%);
 }
 /* ALCHEMICALS */
 .sheet-title-checkbox ~ div {
@@ -2223,7 +2357,7 @@ input.sheet-title-checkbox {
 	height: 24px;
 }
 .sheet-title-checkbox:hover + span {
-	color: red;
+	color: $dd-darkred;
 }
 .sheet-alchemicals {
 	padding: 0 5px;
@@ -2290,7 +2424,7 @@ input.sheet-title-checkbox {
 		font-family: serif;
 	}
 	.sheet-alchemicals-expand:checked + span {
-		color: red;
+		color: $dd-darkred;
 	}
 	.itemcontrol .btn {
 		padding: 0 4px;
@@ -2315,19 +2449,22 @@ input.sheet-title-checkbox {
 	align-items: center;
 }
 .sheet-factiontitle input[type=text] {
-	font-size: 26px;
+	font-size: 24px;
 	margin-right: auto;
 	width: 60%;
 }
 .sheet-factions-header {
+	font-size: 24px;
 	width: 100%;
-	height: 24px;
+	height: 20px;
 	align-items: center;
 	line-height: 14px;
-	background: $lighter;
+	background: $dd-black;
+	color: $dd-light;
 }
 .sheet-factions-header input[type=text] {
 	padding-left: 3px;
+	color: $dd-light;
 }
 .sheet-factions-header span {
 	font-size: 7px;
@@ -2352,8 +2489,15 @@ input.sheet-expand, .sheet-expand + span {
 		content: "▼";
 	}
 }
-.sheet-faction {
+
+.sheet-faction { 
 	border-bottom: 1px solid $lightest;
+	label {
+		font-size: 10px;
+		line-height: 1.0;
+		height: 10px;
+		padding: 1;
+	}
 	textarea {
 		border-top: 1px solid $lightest;
 		font-size: 11px;
@@ -2370,12 +2514,63 @@ input.sheet-expand, .sheet-expand + span {
 		border-right: 1px solid $lightest;
 		font-size: 12px;
 		padding: 2px 1px;
+		color: $dd-black;
 	}
 }
+
 .sheet-expand:not(:checked) ~ textarea {
 	height: 0 !important;
 	border-width: 0;
 }
+
+.sheet-locationcard { 
+	border-radius: 5px;
+    background: $dd-black;
+    padding: 1px;
+	margin-top: 5px;
+
+	input[type=text] {
+		font-size: 12px;
+		text-transform: uppercase;
+		padding-left: 5px;
+		padding-right: 5px;
+		color: dd-darkred;
+	}
+	textarea {
+		background: rgba(255, 255, 255, 0.75);
+		font-size: 11px;
+		line-height: 1.5;
+		height: 51px;
+	}
+	label {
+		font-size: 10px;
+		line-height: 1.0;
+		height: 10px;
+		padding: 3px;
+		text-align: right;
+		vertical-align: middle;
+		color: $dd-light;
+		font-style: italic;
+	}
+	input[type=number] {
+		border: none;
+		background: transparent;
+		padding: 0;
+		font-size: 12px;
+		width: 30px;
+		text-align: center;
+	}
+	.sheet-location-stats-row {
+		display: flex;
+		flex-direction: row;
+		padding-top: 5px;
+		padding-bottom: 12px;
+		// vertical align
+		align-items: flex;
+	}
+}
+
+
 /* Column widths */
 .sheet-faction-name, input[type=text].sheet-faction-name {
 	width: 65%;
@@ -2384,6 +2579,7 @@ input.sheet-expand, .sheet-expand + span {
 	width: 10%;
 	text-align: center;
 }
+
 .sheet-faction-hold, input[type=text].sheet-faction-hold {
 	width: 10%;
 	text-align: center;
@@ -2395,6 +2591,7 @@ input.sheet-expand, .sheet-expand + span {
 /* War blurb */
 .sheet-warblurb {
 	text-align: justify;
+	padding: 5px;
 	.sheet-label {
 		font-size: 14px;
 	}
@@ -2493,64 +2690,4 @@ button[type=roll].sheet-broadcast-button {
 	line-height: 11px;
 	right: 2px;
 	top: 1px;
-}
-
-/* Kirsty */
-.sheet-use-kirsty[value="1"] ~ .sheet-container {
-	.sheet-specialheader,
-	.sheet-blackheader,
-	.sheet-greyheader,
-	.sheet-black-on-grey,
-	.sheet-playbook input[type="text"],
-	.sheet-plainheader,
-	.sheet-itemheader :first-child,
-	.sheet-loadheader :first-child,
-	.sheet-attribute-title button[type=roll].sheet-rollbutton,
-	.sheet-bonusdie > .sheet-label:first-child,
-	.sheet-cohort-title,
-	.sheet-claimbox .sheet-label,
-	.sheet-lairbox,
-	.sheet-crewheader,
-	.sheet-factiontitle input[type="text"],
-	.sheet-factions-header input[type="text"] {
-		font-family: Kirsty, Georgia, serif;
-	}
-	.sheet-claimbox .sheet-label {
-		font-size: 10px;
-		font-weight: 400;
-	}
-	.sheet-specialheader, .sheet-itemheader :first-child, .sheet-loadheader :first-child {
-		font-size: 12px;
-		font-weight: 400;
-	}
-	.sheet-plainheader, .sheet-cohort-title {
-		font-size: 13px;
-		font-weight: 400;
-	}
-	.sheet-factions-header input[type="text"],
-	.sheet-bonusdie > .sheet-label:first-child {
-		font-size: 14px;
-		font-weight: 400;
-	}
-	.sheet-attribute-title button[type=roll].sheet-rollbutton, .sheet-lairbox {
-		font-size: 15px;
-		font-weight: 400;
-	}
-	.sheet-crewheader {
-		font-size: 29px;
-		letter-spacing: 0;
-	}
-	.sheet-factiontitle input[type="text"] {
-		font-size: 32px;
-	}
-	.sheet-playbook input[type="text"] {
-		font-size: 40px;
-		letter-spacing: 0;
-	}
-	.sheet-blackheader, .sheet-greyheader, .sheet-black-on-grey {
-		.sheet-label, button[type="roll"].sheet-label {
-			font-size: 12px;
-			font-weight: 400;
-		}
-	}
 }

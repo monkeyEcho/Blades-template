@@ -1,6 +1,22 @@
-mixin claimbox(number)
+mixin claimbox-darkness(number)
 	+hidden-input(`claim_${number}_check`)(value='0')
-	.claimbox
+	.claimbox-darkness
+		label
+			+checkbox(`claim_${number}_check`).checkbox.squarebox-small
+		+textarea(`claim_${number}_name`).label
+		+textarea(`claim_${number}_desc`).claim-desc
+
+mixin claimbox-neutral(number)
+	+hidden-input(`claim_${number}_check`)(value='0')
+	.claimbox-neutral
+		label
+			+checkbox(`claim_${number}_check`).checkbox.squarebox-small
+		+textarea(`claim_${number}_name`).label
+		+textarea(`claim_${number}_desc`).claim-desc
+
+mixin claimbox-light(number)
+	+hidden-input(`claim_${number}_check`)(value='0')
+	.claimbox-light
 		label
 			+checkbox(`claim_${number}_check`).checkbox.squarebox-small
 		+textarea(`claim_${number}_name`).label
@@ -12,6 +28,17 @@ mixin claimbridge(number, type)
 
 mixin makeupgrade(number, numboxes, def, desc)
 	.col50
+		.item
+			+checkbox(`upgrade_${number}_check_1`).checkbox.squarebox
+			if (numboxes === 2)
+				+checkbox(`upgrade_${number}_check_2`).checkbox.squarebox
+			+text-input(`upgrade_${number}_name`, def).itemname
+		.item-description
+			+checkbox(`upgrade_${number}_expand`).expand
+			+textarea(`upgrade_${number}_description`, desc)(data-i18n-placeholder='description')
+
+mixin makeupgrade100(number, numboxes, def, desc)
+	.col100
 		.item
 			+checkbox(`upgrade_${number}_check_1`).checkbox.squarebox
 			if (numboxes === 2)
@@ -45,13 +72,13 @@ mixin makeupgrade(number, numboxes, def, desc)
 					.label(data-i18n='rep')
 				.rep2.blackborder.flex
 					.turfbox
-						each num in range(1,6)
+						each num in range(1,3)
 							+radio('turf')(value=num)
 					+hidden-input('turf')(value='0').turf-input
 					+radio('rep')(value='0', checked).tooth.zero
 					//- generates 12 rep boxes. The complicated code for the class assigns the necessary CSS classes for turf to work correctly
 					each num in range(1,12)
-						+radio('rep')(class=['tooth', 'stresstooth', ...((num < 6) ? [] : [...Array(num-6).keys()].map(x => `turf${6-x}`))], value=num)
+						+radio('rep')(class=['tooth', 'stresstooth', ...((num < 10) ? [] : [...Array(num-6).keys()].map(x => `turf${6-x}`))], value=num)
 				.rep3.blackborder
 					.black-on-grey
 						.label(data-i18n='turf')
@@ -81,38 +108,48 @@ mixin makeupgrade(number, numboxes, def, desc)
 		// Claims
 		.claims.col100.free-repcontrol
 			.claimsrow.flex
-				each num in range(1,5)
-					+claimbox(num)
-					if (num !== 5)
-						+claimbridge(`${num}_${num+1}`, 'hori')
+				+claimbox-darkness(1)
+				+claimbridge('1_2', 'hori')
+				+claimbox-neutral(2)
+				+claimbridge('2_3', 'hori')
+				+claimbox-neutral(3)
+				+claimbridge('3_4', 'hori')
+				+claimbox-light(4)
+				+claimbridge('4_5', 'hori')
+				+claimbox-light(5)
 			.claims-seprow.flex
 				each num in range(1,5)
 					+claimbridge(`${num}_${num+5}`, 'vert')
 			.claimsrow.flex
-				+claimbox(6)
+				+claimbox-darkness(6)
 				+claimbridge('6_7', 'hori')
-				+claimbox(7)
+				+claimbox-darkness(7)
 				+claimbridge('7_8', 'hori')
 				.lairbox.flex-center.uppercase(data-i18n='lair')
 				+claimbridge('8_9', 'hori')
-				+claimbox(9)
+				+claimbox-light(9)
 				+claimbridge('9_10', 'hori')
-				+claimbox(10)
+				+claimbox-light(10)
 			.claims-seprow.flex
 				each num in range(6,10)
 					+claimbridge(`${num}_${num+5}`, 'vert')
 			.claimsrow.flex
-				each num in range(11,15)
-					+claimbox(num)
-					if (num !== 15)
-						+claimbridge(`${num}_${num+1}`, 'hori')
+				+claimbox-darkness(11)
+				+claimbridge('11_12', 'hori')
+				+claimbox-darkness(12)
+				+claimbridge('12_13', 'hori')
+				+claimbox-neutral(13)
+				+claimbridge('13_14', 'hori')
+				+claimbox-neutral(14)
+				+claimbridge('14_15', 'hori')
+				+claimbox-light(15)
 			fieldset.repeating_claim
 				.claims-seprow.flex
 					each num in range(1,5)
 						+claimbridge(`top_${num}`, 'vert')
 				.claimsrow.flex
 					each num in range(1,5)
-						+claimbox(num)
+						+claimbox-neutral(num)
 						if (num !== 5)
 							+claimbridge(`${num}_${num+1}`, 'hori')
 		// Heat and Coin
@@ -124,8 +161,8 @@ mixin makeupgrade(number, numboxes, def, desc)
 					.label(data-i18n='heat')
 				.heat2.blackborder.flex
 					+radio('heat')(value='0', checked).tooth.zero
-					//- generates 9 heat boxes
-					each num in range(1,9)
+					//- generates 10 heat boxes
+					each num in range(1,10)
 						+radio('heat')(value=num).tooth.stresstooth
 				// Wanted Level
 				.heat3
@@ -145,15 +182,24 @@ mixin makeupgrade(number, numboxes, def, desc)
 					.greyheader.crewcoin2
 						.label(data-i18n='vaults')
 				.col100.flex.crewcoin-coins
-					+radio('crewcoin')(value='0', checked).zero
-					each num in range(1,4)
-						+radio('crewcoin')(value=num).radiobox
+					+coinbox('possecoin1')
+					+coinbox('possecoin2')
+					+coinbox('possecoin3')
+					+coinbox('possecoin4')
 					.crewcoinbar
-					each num in range(5,8)
-						+radio('crewcoin')(value=num).radiobox.vaultcoin
+					+coinbox('vaultcoin01')
+					+coinbox('vaultcoin02')
+					+coinbox('vaultcoin03')
+					+coinbox('vaultcoin04')
 					.crewcoinbar
-					each num in range(9,16)
-						+radio('crewcoin')(value=num).radiobox.vaultcoin
+					+coinbox('vaultcoin05')
+					+coinbox('vaultcoin06')
+					+coinbox('vaultcoin07')
+					+coinbox('vaultcoin08')
+					+coinbox('vaultcoin09')
+					+coinbox('vaultcoin10')
+					+coinbox('vaultcoin11')
+					+coinbox('vaultcoin12')
 				.col100.crewcoin-desc(data-i18n='upon_crew_advance')
 		// Special abilities
 		.col100.def-margin
@@ -224,23 +270,32 @@ mixin makeupgrade(number, numboxes, def, desc)
 							+textarea('description')(data-i18n-placeholder='description')
 				// Regular upgrades
 				.regularitems.flex-wrap.col100
-					.item.col50
+					.item.col100
 						span.label(data-i18n='lair')
-					.item.col50
+					+makeupgrade(1, 2, 'carriage', 'upgrade_carriage_description')
+					+makeupgrade(2, 1, 'hidden', 'upgrade_hidden_description')
+					+makeupgrade(3, 1, 'quarters', 'upgrade_quarters_description')
+					+makeupgrade(4, 2, 'secure', 'upgrade_secure_description')
+					+makeupgrade(5, 2, 'vault', 'upgrade_vault_description')
+					+makeupgrade(6, 1, 'workshop', 'upgrade_workshop_description')
+					+makeupgrade100(7, 1, 'escape_tunnel', 'upgrade_escape_tunnel_description')
+					+makeupgrade100(8, 2, 'hellstone_storage', 'upgrade_hellstone_storage_description')
+					+makeupgrade100(9, 1, 'rail_connection', 'upgrade_rail_connection_description')
+					.item.col100
 						span.label(data-i18n='quality')
-					.item.upgradecaption.col50
+					+makeupgrade(10, 1, 'documents', 'upgrade_documents_description')
+					+makeupgrade(11, 1, 'gear', 'upgrade_gear_description')
+					+makeupgrade(12, 1, 'implements', 'upgrade_implements_description')
+					+makeupgrade(13, 1, 'supplies', 'upgrade_supplies_description')
+					+makeupgrade(14, 1, 'weapons', 'upgrade_weapons_description')
+					+makeupgrade(15, 1, 'tools', 'upgrade_tools_description')
+					+makeupgrade(16, 1, 'horses', 'upgrade_horses_description')
+					+makeupgrade(17, 2, 'hellstone', 'upgrade_hellstone_description')
+					.item.upgradecaption.col100
 						span.label(data-i18n='training')
-					.item.upgradecaption.col50
-						span.label(data-i18n='cohorts')
 					+makeupgrade(20, 1, 'insight', 'upgrade_insight_description')
-					.item.col50
-						.label.upgradecosts(data-i18n='upgrade_costs')
 					+makeupgrade(21, 1, 'prowess', 'upgrade_prowess_description')
-					.item.col50
-						.upgradecosts(data-i18n='new_cohort')
-					+makeupgrade(22, 1, 'resolve', 'upgrade_resolve_description')
-					.item.col50
-						.upgradecosts(data-i18n='add_type')
+					+makeupgrade(22, 1, 'guts', 'upgrade_guts_description')
 					+makeupgrade(23, 1, 'personal', 'upgrade_personal_description')
 					.col100
 						.item

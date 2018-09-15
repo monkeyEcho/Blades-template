@@ -2,7 +2,7 @@
 // Configuration
 const config = {
 	enableBabel: true, // change to false to disable babel
-	pretty: false // change to true if you want to produce human-readable output
+	pretty: true // change to true if you want to produce human-readable output
 };
 
 // Code below

@@ -26,14 +26,14 @@ mixin text-input(name, i18nvalue)
 
 mixin number-input(name)
 	input(type='number', name=`attr_${name}`)&attributes(attributes)
-
+	
 mixin textarea(name, i18nvalue)
 	textarea(spellcheck='false', name=`attr_${name}`)&attributes(attributes)
 		= i18nvalue ? translation[i18nvalue] : ''
-
+	
 mixin hidden-input(name)
 	input(type='hidden', name=`attr_${name}`)&attributes(attributes)
-
+	
 mixin hidden-checkbox(name)
 	- classes = attributes.class;
 	- delete attributes.class;
@@ -44,6 +44,16 @@ mixin autoexpand(name, i18nvalue)
 		span(name=`attr_${name}`)= i18nvalue ? translation[i18nvalue] : ''
 		+textarea(name, i18nvalue)(data-i18n-placeholder!=attributes['data-i18n-placeholder'])
 
+mixin coinbox(name)
+	.coin-selector
+		input.hidden.sheet-coinbox(type='checkbox', name=`attr_${name}_type`, value='hellstone')
+		input.sheet-coinbox(type='radio', name=`attr_${name}_type`, value='zero', checked)
+		input.sheet-coinbox(type='radio', name=`attr_${name}_type`, value='coin')
+		input.sheet-coinbox(type='radio', name=`attr_${name}_type`, value='hellstone')
+		span(data-i18n='zero_mode')
+		span(data-i18n='coin_mode')
+		span(data-i18n='hellstone_mode')
+		
 //- Creates a normal roll button
 mixin roll(name, templatedata, stat)
 	button(
@@ -147,7 +157,6 @@ mixin makeclock(isFaction)
 +hidden-input('setting_focus_shadow')(value='1').focus-shadow
 +hidden-input('setting_show_broadcast')(value='1').show-broadcast
 +hidden-input('setting_show_itemdesc')(value='1').show-itemdesc
-+hidden-input('setting_usekirsty')(value='0').use-kirsty
 +hidden-input('setting_flexwidth')(value='0').flexwidth
 +hidden-input('changed_attributes')(value='')
 +hidden-input('bonusdice')(value='Bonus dice')
