@@ -253,6 +253,7 @@
 	},
 	"playbook": {
         "the_fist": {
+			"numberOfFriends": 5,
             "ability": ["is_that_all_you_got", "everybodys_kung_fu_fighting", "where_does_that_come_from", "st_anger", "health_is_better_than_wealth", "man_of_honor", "bad_ass_kata", "veteran"],
             "base": {
 				"sling": "1",
@@ -294,6 +295,7 @@
 			}]
         },
         "the_shot": {
+			"numberOfFriends": 5,
             "ability": ["smoke_and_mirrors", "fancy_dead_eye", "eastwood", "lightning_nerves_of_steal", "silver_bullets", "fill_the_air_with_lead", "stunning_performance", "veteran"],
             "base": {
 				"sling": "2",
@@ -334,6 +336,7 @@
 			}]
         },
         "the_law": {
+			"numberOfFriends": 5,
             "ability": ["i_am_the_law", "a_story_to_tell", "this_aint_no_coon_hunt", "ask_what_your_country_can_do_for_you", "s_only_a_flesh_wound", "moral_compass", "tactical_genius", "veteran"],
             "base": {
 				"hunt": "1",
@@ -375,6 +378,7 @@
 			}]
         },
         "the_gamble": {
+			"numberOfFriends": 5,
             "ability": ["all_eyes_on_me", "gamblers_gift", "cutting_cards", "heart_of_the_cards", "fight_with_panache", "saloon_swagger", "miss_fortune", "veteran"],
             "base": {
 				"sling": "1",
@@ -416,6 +420,7 @@
 			}]
         },
         "the_scout": {
+			"numberOfFriends": 5,
             "ability": ["darken_than_the_shadows", "silent_hunter", "survivor", "learned_my_trade_from_the_best", "youre_my_game", "like_a_brother", "see_another_day", "listen_to_the_land", "veteran"],
             "base": {
 				"hunt": "2",
@@ -456,6 +461,7 @@
 			}]
         },
         "the_outlaw": {
+			"numberOfFriends": 6,
             "ability": ["one_of_those_days_again", "now_now_now", "dont_saw_that_coming", "daredevil", "vengeful", "some_fine_reputation", "blaze_of_glory", "veteran"],
             "base": {
 				"survey": "1",
@@ -497,6 +503,7 @@
 			}]
         },
         "the_thunderheart": {
+			"numberOfFriends": 5,
             "ability": ["guided_by_the_totem", "totems_vessel", "protector_of_the_people", "a_devil_with_a_blade", "gruesome_warpaint", "totem_sense", "lone_wolf", "veteran"],
             "base": {
 				"attune": "1",
@@ -538,6 +545,7 @@
 			}]
         },
         "the_speaker": {
+			"numberOfFriends": 5,
             "ability": ["walk_through_the_valley", "shepherd", "a_dogs_nose", "hallow", "curandero", "eli", "premonition", "veteran"],
             "base": {
 				"read": "1",
@@ -579,6 +587,7 @@
 			}]
         },
         "the_plan": {
+			"numberOfFriends": 6,
             "ability": ["god_save_me_from_friends", "foresight", "planning_is_everything", "runs_in_the_family", "weaving_the_web", "old_friends_everywhere", "fingers_in_every_pie", "veteran"],
             "base": {
 				"read": "1",
@@ -619,6 +628,7 @@
 			}]
         },
         "the_gentle_touch": {
+			"numberOfFriends": 5,
             "ability": ["snakeoil_miracles", "influential", "little_vultures", "well_travelled", "fandango", "quick_witted", "viper", "in_good_hands", "veteran"],
             "base": {
 				"read": "2",
@@ -659,6 +669,7 @@
 			}]
         },
         "the_wrench_and_saw": {
+			"numberOfFriends": 5,
             "ability": ["driven", "skillful", "mad_scientist", "spiritmancer", "listening_to_their_voices", "speaking_their_tongue", "blood_sweat_and_gears", "right_time_right_tool", "veteran"],
             "base": {
 				"craft": "2",
@@ -974,7 +985,7 @@
 		"survey": "0",
 		"sway": "0"
 	},
-	"maxFriendsPerPlaybook": 6,
+	"numberOfFriends": 6,
 	"maxContactsPerCrew": 6,
 	"friendlessPlaybooks": [],
 	"translatedCrewAttributes": ["crew_description", "crew_xp_condition"],

@@ -2273,12 +2273,12 @@ input.sheet-checkbox.sheet-squarebox-small, .sheet-checkbox.sheet-squarebox-smal
 	justify-content: space-between;
 }
 .sheet-lairbox {
-	background: $dd-darkred;
 	width: 18.4%;
-	font-size: 13px;
+	font-size: 12px;
 	color: $dd-light;
-	letter-spacing: 1px;
-	box-shadow: 1px 1px 3px $dd-black;
+	background: $dd-darkred;
+	letter-spacing: 0px;
+	box-shadow: 0px 0px 6px $dd-black;
 }
 .sheet-claims-horisep {
 	height: 12px;
@@ -2298,11 +2298,13 @@ input.sheet-checkbox.sheet-squarebox-small, .sheet-checkbox.sheet-squarebox-smal
 	transition: all 0.2s;
 	
 	.sheet-label {
+		color: $darkgrey;
 		height: 30px;
 		padding: 4px 0 2px;
 		line-height: 12px;
 	}
 	textarea {
+		color: $darkgrey;
 		text-align: center;
 		font-size: 9px;
 		resize: none;
@@ -2313,34 +2315,57 @@ input.sheet-checkbox.sheet-squarebox-small, .sheet-checkbox.sheet-squarebox-smal
 		}
 	}
 	label {
+		color: $darkgrey;
 		position: absolute;
 		bottom: 1px;
 		left: 1px;
 	}
 }
 .sheet-claimbox-neutral {
-	background: $dd-grey;
-	background-image: url('https://www.dropbox.com/s/39hblxktkx6drol/box1.png?raw=1');
+	//background: $dd-grey;
+	background-image: url('https://www.dropbox.com/s/o6qv50ex7anfsp7/box_neutral.png?raw=1');
     background-repeat: round;
 }
 .sheet-claimbox-light {
-	background: $dd-light;
-	background-image: url('https://www.dropbox.com/s/39hblxktkx6drol/box1.png?raw=1');
+	//background: $dd-light;
+	background-image: url('https://www.dropbox.com/s/etqttco4d9tkl3y/box_light.png?raw=1');
     background-repeat: round;
 }
 .sheet-claimbox-darkness {
-	background: $dd-black;
-	background-image: url('https://www.dropbox.com/s/39hblxktkx6drol/box1.png?raw=1');
+	//background: $dd-black;
+	background-image: url('https://www.dropbox.com/s/9pvyb1tegtwde9e/box_darkness.png?raw=1');
     background-repeat: round;
 }
 
-input[value="1"] + .sheet-claimbox-light,
-input[value="1"] + .sheet-claimbox-neutral,
+input[value="1"] + .sheet-claimbox-light {
+	border:1px solid $dd-red;
+	box-shadow: 0px 0px 4px $dd-black;
+	//background: lighten($dd-red, 40%);
+	background-image: url('https://www.dropbox.com/s/7swql9mddspdnhe/box_light_checked.png?raw=1');
+    background-repeat: round;
+	.sheet-label {
+		color: $dd-darkred;
+	}
+}
+input[value="1"] + .sheet-claimbox-neutral {
+	border:1px solid $dd-red;
+	box-shadow: 0px 0px 4px $dd-black;
+	background-image: url('https://www.dropbox.com/s/7vkiwpm3n5cn18i/box_neutral_checked.png?raw=1');
+    background-repeat: round;
+	.sheet-label {
+		color: $dd-darkred;
+	}
+}
 input[value="1"] + .sheet-claimbox-darkness {
 	border:1px solid $dd-red;
-	box-shadow: 1px 1px 3px $dd-black;
-	//background: lighten($dd-red, 40%);
+	box-shadow: 0px 0px 4px $dd-black;
+	background-image: url('https://www.dropbox.com/s/hexwib9wgfj76tm/box_darkness_checked.png?raw=1');
+    background-repeat: round;
+	.sheet-label {
+		color: $dd-darkred;
+	}
 }
+
 /* ALCHEMICALS */
 .sheet-title-checkbox ~ div {
 	height: auto;

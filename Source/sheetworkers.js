@@ -50,7 +50,7 @@ Object.keys(data.playbook).forEach(playbook => {
 	});
 	/* Generate playbook friends from translation file */
 	if (!data.friendlessPlaybooks.includes(playbook)) {
-		data.playbook[playbook].friend = [...Array(data.maxFriendsPerPlaybook).keys()]
+		data.playbook[playbook].friend = [...Array(data.playbook[playbook].numberOfFriends).keys()]
 			.map(i => ({
 				name: getTranslation(`playbook_${playbook}_friend_${i}`)
 			}))

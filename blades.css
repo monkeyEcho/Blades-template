@@ -2222,12 +2222,12 @@ input.sheet-checkbox.sheet-squarebox-small, .sheet-checkbox.sheet-squarebox-smal
   justify-content: space-between;
 }
 .sheet-lairbox {
-  background: #8d1411;
   width: 18.4%;
-  font-size: 13px;
+  font-size: 12px;
   color: #fff6f6;
-  letter-spacing: 1px;
-  box-shadow: 1px 1px 3px #0e0c0c;
+  background: #8d1411;
+  letter-spacing: 0px;
+  box-shadow: 0px 0px 6px #0e0c0c;
 }
 .sheet-claims-horisep {
   height: 12px;
@@ -2249,6 +2249,7 @@ input.sheet-checkbox.sheet-squarebox-small, .sheet-checkbox.sheet-squarebox-smal
 .sheet-claimbox-neutral .sheet-label,
 .sheet-claimbox-light .sheet-label,
 .sheet-claimbox-darkness .sheet-label {
+  color: #b4b4b4;
   height: 30px;
   padding: 4px 0 2px;
   line-height: 12px;
@@ -2256,6 +2257,7 @@ input.sheet-checkbox.sheet-squarebox-small, .sheet-checkbox.sheet-squarebox-smal
 .sheet-claimbox-neutral textarea,
 .sheet-claimbox-light textarea,
 .sheet-claimbox-darkness textarea {
+  color: #b4b4b4;
   text-align: center;
   font-size: 9px;
   resize: none;
@@ -2270,30 +2272,49 @@ input.sheet-checkbox.sheet-squarebox-small, .sheet-checkbox.sheet-squarebox-smal
 .sheet-claimbox-neutral label,
 .sheet-claimbox-light label,
 .sheet-claimbox-darkness label {
+  color: #b4b4b4;
   position: absolute;
   bottom: 1px;
   left: 1px;
 }
 .sheet-claimbox-neutral {
-  background: #a19393;
-  background-image: url("https://www.dropbox.com/s/39hblxktkx6drol/box1.png?raw=1");
+  background-image: url("https://www.dropbox.com/s/o6qv50ex7anfsp7/box_neutral.png?raw=1");
   background-repeat: round;
 }
 .sheet-claimbox-light {
-  background: #fff6f6;
-  background-image: url("https://www.dropbox.com/s/39hblxktkx6drol/box1.png?raw=1");
+  background-image: url("https://www.dropbox.com/s/etqttco4d9tkl3y/box_light.png?raw=1");
   background-repeat: round;
 }
 .sheet-claimbox-darkness {
-  background: #0e0c0c;
-  background-image: url("https://www.dropbox.com/s/39hblxktkx6drol/box1.png?raw=1");
+  background-image: url("https://www.dropbox.com/s/9pvyb1tegtwde9e/box_darkness.png?raw=1");
   background-repeat: round;
 }
-input[value="1"] + .sheet-claimbox-light,
-input[value="1"] + .sheet-claimbox-neutral,
+input[value="1"] + .sheet-claimbox-light {
+  border: 1px solid #be1515;
+  box-shadow: 0px 0px 4px #0e0c0c;
+  background-image: url("https://www.dropbox.com/s/7swql9mddspdnhe/box_light_checked.png?raw=1");
+  background-repeat: round;
+}
+input[value="1"] + .sheet-claimbox-light .sheet-label {
+  color: #8d1411;
+}
+input[value="1"] + .sheet-claimbox-neutral {
+  border: 1px solid #be1515;
+  box-shadow: 0px 0px 4px #0e0c0c;
+  background-image: url("https://www.dropbox.com/s/7vkiwpm3n5cn18i/box_neutral_checked.png?raw=1");
+  background-repeat: round;
+}
+input[value="1"] + .sheet-claimbox-neutral .sheet-label {
+  color: #8d1411;
+}
 input[value="1"] + .sheet-claimbox-darkness {
   border: 1px solid #be1515;
-  box-shadow: 1px 1px 3px #0e0c0c;
+  box-shadow: 0px 0px 4px #0e0c0c;
+  background-image: url("https://www.dropbox.com/s/hexwib9wgfj76tm/box_darkness_checked.png?raw=1");
+  background-repeat: round;
+}
+input[value="1"] + .sheet-claimbox-darkness .sheet-label {
+  color: #8d1411;
 }
 /* ALCHEMICALS */
 .sheet-title-checkbox ~ div {
