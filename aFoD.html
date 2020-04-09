@@ -54,6 +54,7 @@
         <option value="the_plan" data-i18n="the_plan"></option>
         <option value="the_gentle_touch" data-i18n="the_gentle_touch"></option>
         <option value="the_wrench_and_saw" data-i18n="the_wrench_and_saw"></option>
+        <option value="the_revenant" data-i18n="the_revenant"></option>
       </select>
       <label class="generatebutton">
         <input type="checkbox" name="attr_generate_ability" value="1"/><span data-i18n="add_abilities"></span>
@@ -119,7 +120,7 @@
     </div>
     <div class="setting-char"><span data-i18n="resistance_bonus"></span>
       <label>
-        <input type="number" name="attr_setting_resbonus_insight" value="0"/><span data-i18n="insight"></span>
+        <input type="number" name="attr_setting_resbonus_wits" value="0"/><span data-i18n="wits"></span>
       </label>
       <label>
         <input type="number" name="attr_setting_resbonus_prowess" value="0"/><span data-i18n="prowess"></span>
@@ -260,30 +261,33 @@
           <div>
             <div class="flex">
               <label class="text-button">
-                <input type="checkbox" name="attr_trauma_cold" value="1"/><span data-i18n="cold"></span>
+                <input type="checkbox" name="attr_trauma_scarred" value="1"/><span data-i18n="scarred"></span>
               </label><span>—</span>
               <label class="text-button">
-                <input type="checkbox" name="attr_trauma_haunted" value="1"/><span data-i18n="haunted"></span>
+                <input type="checkbox" name="attr_trauma_corrupted" value="1"/><span data-i18n="corrupted"></span>
               </label><span>—</span>
               <label class="text-button">
-                <input type="checkbox" name="attr_trauma_obsessed" value="1"/><span data-i18n="obsessed"></span>
+                <input type="checkbox" name="attr_trauma_visions" value="1"/><span data-i18n="visions"></span>
               </label><span>—</span>
               <label class="text-button">
-                <input type="checkbox" name="attr_trauma_paranoid" value="1"/><span data-i18n="paranoid"></span>
-              </label>
+                <input type="checkbox" name="attr_trauma_gloryhound" value="1"/><span data-i18n="gloryhound"></span>
+              </label><span>—</span>
             </div>
             <div class="flex">
               <label class="text-button">
-                <input type="checkbox" name="attr_trauma_reckless" value="1"/><span data-i18n="reckless"></span>
+                <input type="checkbox" name="attr_trauma_voices" value="1"/><span data-i18n="voices"></span>
               </label><span>—</span>
               <label class="text-button">
-                <input type="checkbox" name="attr_trauma_soft" value="1"/><span data-i18n="soft"></span>
+                <input type="checkbox" name="attr_trauma_cursed" value="1"/><span data-i18n="cursed"></span>
               </label><span>—</span>
               <label class="text-button">
-                <input type="checkbox" name="attr_trauma_unstable" value="1"/><span data-i18n="unstable"></span>
+                <input type="checkbox" name="attr_trauma_numb" value="1"/><span data-i18n="numb"></span>
               </label><span>—</span>
               <label class="text-button">
-                <input type="checkbox" name="attr_trauma_vicious" value="1"/><span data-i18n="vicious"></span>
+                <input type="checkbox" name="attr_trauma_hunted" value="1"/><span data-i18n="hunted"></span>
+              </label><span>—</span>
+              <label class="text-button">
+                <input type="checkbox" name="attr_trauma_shamed" value="1"/><span data-i18n="shamed"></span>
               </label>
             </div>
           </div>
@@ -482,8 +486,8 @@
             </div>
           </li>
           <li>
-            <div class="auto-expand"><span name="attr_xp_condition3">You struggled with issues from your vice or traumas during the session.</span>
-              <textarea spellcheck="false" name="attr_xp_condition3">You struggled with issues from your vice or traumas during the session.</textarea>
+            <div class="auto-expand"><span name="attr_xp_condition3">You struggled with issues from your vice, mutation, stigmata during the session.</span>
+              <textarea spellcheck="false" name="attr_xp_condition3">You struggled with issues from your vice, mutation, stigmata during the session.</textarea>
             </div>
           </li>
         </ul>
@@ -655,18 +659,18 @@
       <div class="col47 right-column actioncolumn small-margin">
         <div class="attribute col100">
           <div class="attribute-title flex col100">
-            <button class="rollbutton label" type="roll" name="roll_insight" value="&{template:bitd} {{charname=@{character_name}}} {{resist=1}} {{subtitle=^{resists} @{consequence_query} ^{with}}} {{title=^{insight}}} @{insight_formula} {{charimage=@{chat_image}}}" data-i18n="insight" data-i18n-title="insight_description"></button>
-            <input type="hidden" name="attr_insight" value="0"/>
-            <input type="hidden" name="attr_insight_formula" value=" {{?{@{bonusdice}|0,zerodice=[[d6]]&amp;#44; [[d6]]|1,dice=[[d6]]|2,dice=[[d6]]&amp;#44; [[d6]]|3,dice=[[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]|4,dice=[[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]|5,dice=[[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]|6,dice=[[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]|-1,zerodice=[[d6]]&amp;#44; [[d6]]|-2,zerodice=[[d6]]&amp;#44; [[d6]]|-3,zerodice=[[d6]]&amp;#44; [[d6]]}}}"/>
-            <input type="hidden" name="attr_insight_xp_max" value="6"/>
+            <button class="rollbutton label" type="roll" name="roll_wits" value="&{template:bitd} {{charname=@{character_name}}} {{resist=1}} {{subtitle=^{resists} @{consequence_query} ^{with}}} {{title=^{wits}}} @{wits_formula} {{charimage=@{chat_image}}}" data-i18n="wits" data-i18n-title="wits_description"></button>
+            <input type="hidden" name="attr_wits" value="0"/>
+            <input type="hidden" name="attr_wits_formula" value=" {{?{@{bonusdice}|0,zerodice=[[d6]]&amp;#44; [[d6]]|1,dice=[[d6]]|2,dice=[[d6]]&amp;#44; [[d6]]|3,dice=[[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]|4,dice=[[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]|5,dice=[[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]|6,dice=[[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]&amp;#44; [[d6]]|-1,zerodice=[[d6]]&amp;#44; [[d6]]|-2,zerodice=[[d6]]&amp;#44; [[d6]]|-3,zerodice=[[d6]]&amp;#44; [[d6]]}}}"/>
+            <input type="hidden" name="attr_wits_xp_max" value="6"/>
             <div class="attribute-xp-box flex">
-              <input class="tooth zero" type="radio" name="attr_insight_xp" value="0" checked="checked"/><span></span>
-              <input class="tooth xptooth" type="radio" name="attr_insight_xp" value="1"/><span></span>
-              <input class="tooth xptooth" type="radio" name="attr_insight_xp" value="2"/><span></span>
-              <input class="tooth xptooth" type="radio" name="attr_insight_xp" value="3"/><span></span>
-              <input class="tooth xptooth" type="radio" name="attr_insight_xp" value="4"/><span></span>
-              <input class="tooth xptooth" type="radio" name="attr_insight_xp" value="5"/><span></span>
-              <input class="tooth xptooth" type="radio" name="attr_insight_xp" value="6"/><span></span>
+              <input class="tooth zero" type="radio" name="attr_wits_xp" value="0" checked="checked"/><span></span>
+              <input class="tooth xptooth" type="radio" name="attr_wits_xp" value="1"/><span></span>
+              <input class="tooth xptooth" type="radio" name="attr_wits_xp" value="2"/><span></span>
+              <input class="tooth xptooth" type="radio" name="attr_wits_xp" value="3"/><span></span>
+              <input class="tooth xptooth" type="radio" name="attr_wits_xp" value="4"/><span></span>
+              <input class="tooth xptooth" type="radio" name="attr_wits_xp" value="5"/><span></span>
+              <input class="tooth xptooth" type="radio" name="attr_wits_xp" value="6"/><span></span>
             </div>
           </div>
           <div class="actions col100">
@@ -1592,7 +1596,7 @@
                 </div>
                 <div class="item-description">
                   <input class="expand" type="checkbox" name="attr_upgrade_1_expand" value="1"/><span></span>
-                  <textarea spellcheck="false" name="attr_upgrade_1_description" data-i18n-placeholder="description">You have a carriage, two horses to pull it, and a stable. A second upgrade improves the carriage with armor and more, larger, swifter horses.</textarea>
+                  <textarea spellcheck="false" name="attr_upgrade_1_description" data-i18n-placeholder="description">You have a carriage, two horses to pull it, and a stable. A second upgrade improves the carriage with armor and four larger, swifter horses.</textarea>
                 </div>
               </div>
               <div class="col50">
@@ -1612,7 +1616,7 @@
                 </div>
                 <div class="item-description">
                   <input class="expand" type="checkbox" name="attr_upgrade_3_expand" value="1"/><span></span>
-                  <textarea spellcheck="false" name="attr_upgrade_3_description" data-i18n-placeholder="description">Your hideout includes living quarters for the posse. Without this upgrade, each PC sleeps elsewhere, and is vulnerable when they do so.</textarea>
+                  <textarea spellcheck="false" name="attr_upgrade_3_description" data-i18n-placeholder="description">Your hideout includes living quarters for the Posse. Without this upgrade, each PC sleeps elsewhere, and is vulnerable when they do so.</textarea>
                 </div>
               </div>
               <div class="col50">
@@ -1623,7 +1627,7 @@
                 </div>
                 <div class="item-description">
                   <input class="expand" type="checkbox" name="attr_upgrade_4_expand" value="1"/><span></span>
-                  <textarea spellcheck="false" name="attr_upgrade_4_description" data-i18n-placeholder="description">Your hideout has locks, alarms, and traps to thwart intruders. A second upgrade improves the defences to include arcane measures that work against spirits and ghosts. You might roll your posse’s Tier if these measures are ever put to the test, to see how well they thwart an intruder.</textarea>
+                  <textarea spellcheck="false" name="attr_upgrade_4_description" data-i18n-placeholder="description">Your hideout has locks, alarms, and traps to thwart intruders. A second upgrade improves the defences to include arcane measures that work against spirits, ghosts and maybe undead. You might roll your Posse’s Tier if these measures are ever put to the test, to see how well they thwart an intruder.</textarea>
                 </div>
               </div>
               <div class="col50">
@@ -1634,7 +1638,7 @@
                 </div>
                 <div class="item-description">
                   <input class="expand" type="checkbox" name="attr_upgrade_5_expand" value="1"/><span></span>
-                  <textarea spellcheck="false" name="attr_upgrade_5_description" data-i18n-placeholder="description">Your hideout has a secure vault, increasing your storage capacity for Coin or Hellstone to 8. A second upgrade increases your capacity to 16. Note that for proper storage of Hellstone you have to get the “Hellstone Storage” upgrade as well. A separate part of your vault can be used as a holding cell.</textarea>
+                  <textarea spellcheck="false" name="attr_upgrade_5_description" data-i18n-placeholder="description">Your hideout has a secure vault, increasing your storage capacity for Coin or Hellstone to 8. A second upgrade increases your capacity to 16. Note that for safe storage of Hellstone you have to get the 'Hellstone Storage' upgrade as well. A separate part of your vault can be used as a holding cell.</textarea>
                 </div>
               </div>
               <div class="col50">
@@ -1665,7 +1669,7 @@
                 </div>
                 <div class="item-description">
                   <input class="expand" type="checkbox" name="attr_upgrade_8_expand" value="1"/><span></span>
-                  <textarea spellcheck="false" name="attr_upgrade_8_description" data-i18n-placeholder="description">Your storage and your Vault have proper Hellstone storage facilities. This does not give you extra capacities but makes the normal storage or the usage of the Vault save.</textarea>
+                  <textarea spellcheck="false" name="attr_upgrade_8_description" data-i18n-placeholder="description">Your Storage and your Vault have proper Hellstone storage facilities. This does not give you extra capacities but makes the storing of Hellstone a safe proposition.</textarea>
                 </div>
               </div>
               <div class="col100">
@@ -1675,7 +1679,7 @@
                 </div>
                 <div class="item-description">
                   <input class="expand" type="checkbox" name="attr_upgrade_9_expand" value="1"/><span></span>
-                  <textarea spellcheck="false" name="attr_upgrade_9_description" data-i18n-placeholder="description">Your hideout is accessible via special rail track. If your hideout is also hidden this applies to your rail track as well.</textarea>
+                  <textarea spellcheck="false" name="attr_upgrade_9_description" data-i18n-placeholder="description">Your hideout is accessible via a special rail track. If your hideout is also hidden this applies to your rail track as well.</textarea>
                 </div>
               </div>
             <div class="item col100"><span class="label" data-i18n="quality"></span></div>
@@ -1757,18 +1761,18 @@
                 </div>
                 <div class="item-description">
                   <input class="expand" type="checkbox" name="attr_upgrade_17_expand" value="1"/><span></span>
-                  <textarea spellcheck="false" name="attr_upgrade_17_description" data-i18n-placeholder="description">+1 quality for Hellstone.</textarea>
+                  <textarea spellcheck="false" name="attr_upgrade_17_description" data-i18n-placeholder="description">Fine Hellstone.</textarea>
                 </div>
               </div>
             <div class="item upgradecaption col100"><span class="label" data-i18n="training"></span></div>
               <div class="col50">
                 <div class="item">
                   <input class="checkbox squarebox" type="checkbox" name="attr_upgrade_20_check_1" value="1"/><span></span>
-                  <input class="itemname" type="text" spellcheck="false" name="attr_upgrade_20_name" value="Insight"/>
+                  <input class="itemname" type="text" spellcheck="false" name="attr_upgrade_20_name"/>
                 </div>
                 <div class="item-description">
                   <input class="expand" type="checkbox" name="attr_upgrade_20_expand" value="1"/><span></span>
-                  <textarea spellcheck="false" name="attr_upgrade_20_description" data-i18n-placeholder="description">Earn 2 xp when training insight during downtime.</textarea>
+                  <textarea spellcheck="false" name="attr_upgrade_20_description" data-i18n-placeholder="description"></textarea>
                 </div>
               </div>
               <div class="col50">
@@ -1778,7 +1782,7 @@
                 </div>
                 <div class="item-description">
                   <input class="expand" type="checkbox" name="attr_upgrade_21_expand" value="1"/><span></span>
-                  <textarea spellcheck="false" name="attr_upgrade_21_description" data-i18n-placeholder="description">Earn 2 xp when training prowess during downtime.</textarea>
+                  <textarea spellcheck="false" name="attr_upgrade_21_description" data-i18n-placeholder="description">Earn 2 xp when training Prowess during downtime.</textarea>
                 </div>
               </div>
               <div class="col50">
@@ -1788,7 +1792,7 @@
                 </div>
                 <div class="item-description">
                   <input class="expand" type="checkbox" name="attr_upgrade_22_expand" value="1"/><span></span>
-                  <textarea spellcheck="false" name="attr_upgrade_22_description" data-i18n-placeholder="description">Earn 2 xp when training guts during downtime.</textarea>
+                  <textarea spellcheck="false" name="attr_upgrade_22_description" data-i18n-placeholder="description">Earn 2 xp when training Guts during downtime.</textarea>
                 </div>
               </div>
               <div class="col50">
@@ -2221,33 +2225,33 @@ const data = {
 	"crew": {
 		"hellstone_scavengers": {
 			"base": {
-				"claim_1_desc": "<description>",
-				"claim_1_name": "Darkness",
-				"claim_2_desc": "<description>",
-				"claim_2_name": "neutral",
-				"claim_3_desc": "<description>",
-				"claim_3_name": "neutral",
-				"claim_4_desc": "<description>",
+				"claim_1_desc": "Hell's Own Light",
+				"claim_1_name": "Dark",
+				"claim_2_desc": "Spirit Well",
+				"claim_2_name": "Neutral",
+				"claim_3_desc": "The Map",
+				"claim_3_name": "Neutral",
+				"claim_4_desc": "The Great Law of Peace",
 				"claim_4_name": "Light",
-				"claim_5_desc": "<description>",
+				"claim_5_desc": "Eternal Flame",
 				"claim_5_name": "Light",
-				"claim_6_desc": "<description>",
-				"claim_6_name": "Darkness",
-				"claim_7_desc": "level 0",
-				"claim_7_name": "Hellstone Claim",
-				"claim_9_desc": "level 0",
-				"claim_9_name": "Hellstone Claim",
-				"claim_10_desc": "<description>",
+				"claim_6_desc": "Hellish Inventor",
+				"claim_6_name": "Dark",
+				"claim_7_desc": "Hellstone Claim",
+				"claim_7_name": "Dark",
+				"claim_9_desc": "The Mark of Beyond",
+				"claim_9_name": "Light",
+				"claim_10_desc": "Hellstone Claim",
 				"claim_10_name": "Light",
-				"claim_11_desc": "<description>",
-				"claim_11_name": "Darkness",
-				"claim_12_desc": "<description>",
-				"claim_12_name": "Darkness",
-				"claim_13_desc": "<description>",
-				"claim_13_name": "neutral",
-				"claim_14_desc": "level 0",
-				"claim_14_name": "Hellstone Claim",
-				"claim_15_desc": "<description>",
+				"claim_11_desc": "The Wyrm",
+				"claim_11_name": "Dark",
+				"claim_12_desc": "The Black Lake",
+				"claim_12_name": "Dark",
+				"claim_13_desc": "The Cornerstone",
+				"claim_13_name": "Neutral",
+				"claim_14_desc": "Hellstone Claim",
+				"claim_14_name": "Neutral",
+				"claim_15_desc": "The Gate",
 				"claim_15_name": "Light",
 				"claim_bridge_1_2": "0",
 				"claim_bridge_2_7": "0",
@@ -2260,7 +2264,7 @@ const data = {
 				"crew_xp_condition": "crew_hellstone_scavengers_xp_condition",
 				"hunting_grounds_type": "modus",
 				"hunting_grounds_description": "SCAVENGE – MINING – SUPPLY – SALE",
-				"upgrade_8_check_1": "1",
+				"upgrade_9_check_1": "1",
 				"upgrade_22_check_1": "1"
 			},
 			"crewability": ["heigh_ho", "transporter", "dig_dug", "leverage", "got_used_to_the_strange_life", "undue_hellish_confidence", "patron", "veteran"],
@@ -2283,33 +2287,33 @@ const data = {
 		},
 		"outlaw_posse": {
 			"base": {
-				"claim_1_desc": "<description>",
-				"claim_1_name": "Darkness",
-				"claim_2_desc": "<description>",
-				"claim_2_name": "neutral",
-				"claim_3_desc": "<description>",
+				"claim_1_desc": "The Morgue",
+				"claim_1_name": "Dark",
+				"claim_2_desc": "Free Man Funeral",
+				"claim_2_name": "Neutral",
+				"claim_3_desc": "A Drop of Hell",
 				"claim_3_name": "neutral",
-				"claim_4_desc": "<description>",
+				"claim_4_desc": "Loaded Dice",
 				"claim_4_name": "Light",
-				"claim_5_desc": "<description>",
+				"claim_5_desc": "The Throne of Skulls",
 				"claim_5_name": "Light",
-				"claim_6_desc": "<description>",
+				"claim_6_desc": "The Beast",
 				"claim_6_name": "Darkness",
-				"claim_7_desc": "level 0",
-				"claim_7_name": "Hellstone Claim",
-				"claim_9_desc": "level 0",
-				"claim_9_name": "Hellstone Claim",
-				"claim_10_desc": "<description>",
+				"claim_7_desc": "Hellstone Claim",
+				"claim_7_name": "Dark",
+				"claim_9_desc": "Last Deals of Dead Men",
+				"claim_9_name": "Light",
+				"claim_10_desc": "Hellstone Claim",
 				"claim_10_name": "Light",
-				"claim_11_desc": "<description>",
-				"claim_11_name": "Darkness",
-				"claim_12_desc": "<description>",
-				"claim_12_name": "Darkness",
-				"claim_13_desc": "<description>",
-				"claim_13_name": "neutral",
-				"claim_14_desc": "level 0",
-				"claim_14_name": "Hellstone Claim",
-				"claim_15_desc": "<description>",
+				"claim_11_desc": "Vengeful Ghosts",
+				"claim_11_name": "Dark",
+				"claim_12_desc": "Bringer of Pain",
+				"claim_12_name": "Dark",
+				"claim_13_desc": "Rail Connection",
+				"claim_13_name": "Neutral",
+				"claim_14_desc": "Hellstone Claim",
+				"claim_14_name": "Light",
+				"claim_15_desc": "Hanging Tree",
 				"claim_15_name": "Light",
 				"claim_bridge_1_2": "0",
 				"claim_bridge_2_7": "0",
@@ -2336,42 +2340,42 @@ const data = {
 				"name": "crew_upgrade_elite_movers",
 				"numboxes": "1"
 			}, {
-				"name": "crew_upgrade_fine_horses",
+				"name": "crew_upgrade_mobile_hideout",
 				"numboxes": "1"
 			}, {
-				"name": "crew_upgrade_hardened",
+				"name": "crew_upgrade_ruthless",
 				"numboxes": "3"
 			}]
 		},
 		"bounty_hunters": {
 			"base": {
-				"claim_1_desc": "<description>",
-				"claim_1_name": "Darkness",
-				"claim_2_desc": "<description>",
-				"claim_2_name": "neutral",
-				"claim_3_desc": "<description>",
-				"claim_3_name": "neutral",
-				"claim_4_desc": "<description>",
+				"claim_1_desc": "The Tangled Web",
+				"claim_1_name": "Dark",
+				"claim_2_desc": "The Wild Hunt",
+				"claim_2_name": "Neutral",
+				"claim_3_desc": "Muddy Informants",
+				"claim_3_name": "Neutral",
+				"claim_4_desc": "Safe Passage",
 				"claim_4_name": "Light",
-				"claim_5_desc": "<description>",
+				"claim_5_desc": "Undertaker",
 				"claim_5_name": "Light",
-				"claim_6_desc": "<description>",
-				"claim_6_name": "Darkness",
-				"claim_7_desc": "level 0",
-				"claim_7_name": "Hellstone Claim",
-				"claim_9_desc": "level 0",
-				"claim_9_name": "Hellstone Claim",
-				"claim_10_desc": "<description>",
+				"claim_6_desc": "Biting Shadows",
+				"claim_6_name": "Dark",
+				"claim_7_desc": "Hellstone Claim",
+				"claim_7_name": "Dark",
+				"claim_9_desc": "Holy Weapon",
+				"claim_9_name": "Light",
+				"claim_10_desc": "Hellstone Claim",
 				"claim_10_name": "Light",
-				"claim_11_desc": "<description>",
-				"claim_11_name": "Darkness",
-				"claim_12_desc": "<description>",
-				"claim_12_name": "Darkness",
-				"claim_13_desc": "<description>",
-				"claim_13_name": "neutral",
-				"claim_14_desc": "level 0",
-				"claim_14_name": "Hellstone Claim",
-				"claim_15_desc": "<description>",
+				"claim_11_desc": "Death's Servant",
+				"claim_11_name": "Dark",
+				"claim_12_desc": "Unholy Weapon",
+				"claim_12_name": "Dark",
+				"claim_13_desc": "Secret Stash",
+				"claim_13_name": "Neutral",
+				"claim_14_desc": "Hellstone Claim",
+				"claim_14_name": "Neutral",
+				"claim_15_desc": "Wasted Bullet",
 				"claim_15_name": "Light",
 				"claim_bridge_1_2": "0",
 				"claim_bridge_2_7": "0",
@@ -2399,7 +2403,7 @@ const data = {
 				"name": "crew_upgrade_elite_scouts",
 				"numboxes": "1"
 			}, {
-				"name": "crew_upgrade_fine_horses",
+				"name": "crew_upgrade_get_out_of_jail_free_card",
 				"numboxes": "1"
 			}, {
 				"name": "crew_upgrade_hardened",
@@ -2408,33 +2412,33 @@ const data = {
 		},
 		"tribe": {
 			"base": {
-				"claim_1_desc": "<description>",
-				"claim_1_name": "Darkness",
-				"claim_2_desc": "<description>",
-				"claim_2_name": "neutral",
-				"claim_3_desc": "<description>",
-				"claim_3_name": "neutral",
-				"claim_4_desc": "<description>",
+				"claim_1_desc": "The Broken Storm",
+				"claim_1_name": "Dark",
+				"claim_2_desc": "The Oracle",
+				"claim_2_name": "Neutral",
+				"claim_3_desc": "Guardian",
+				"claim_3_name": "Neutral",
+				"claim_4_desc": "Ancestor Spirits",
 				"claim_4_name": "Light",
-				"claim_5_desc": "<description>",
+				"claim_5_desc": "Shadow of the Moon",
 				"claim_5_name": "Light",
-				"claim_6_desc": "<description>",
-				"claim_6_name": "Darkness",
-				"claim_7_desc": "level 0",
-				"claim_7_name": "Hellstone Claim",
-				"claim_9_desc": "level 0",
-				"claim_9_name": "Hellstone Claim",
-				"claim_10_desc": "<description>",
+				"claim_6_desc": "The Bonding",
+				"claim_6_name": "Dark",
+				"claim_7_desc": "Hellstone Claim",
+				"claim_7_name": "Dark",
+				"claim_9_desc": "The Song of Buffalo",
+				"claim_9_name": "Light",
+				"claim_10_desc": "Hellstone Claim",
 				"claim_10_name": "Light",
-				"claim_11_desc": "<description>",
-				"claim_11_name": "Darkness",
-				"claim_12_desc": "<description>",
-				"claim_12_name": "Darkness",
-				"claim_13_desc": "<description>",
-				"claim_13_name": "neutral",
-				"claim_14_desc": "level 0",
-				"claim_14_name": "Hellstone Claim",
-				"claim_15_desc": "<description>",
+				"claim_11_desc": "Visions of End Time",
+				"claim_11_name": "Dark",
+				"claim_12_desc": "The Sea of Bones",
+				"claim_12_name": "Dark",
+				"claim_13_desc": "The Dance of Coyote",
+				"claim_13_name": "Neutral",
+				"claim_14_desc": "Hellstone Claim",
+				"claim_14_name": "Neutral",
+				"claim_15_desc": "Taming the Thunderbird",
 				"claim_15_name": "Light",
 				"claim_bridge_1_2": "0",
 				"claim_bridge_2_7": "0",
@@ -2462,7 +2466,7 @@ const data = {
 				"name": "crew_upgrade_elite_movers",
 				"numboxes": "1"
 			}, {
-				"name": "crew_upgrade_fine_horses",
+				"name": "crew_upgrade_gateway_to_the_burning_beyond",
 				"numboxes": "1"
 			}, {
 				"name": "crew_upgrade_hardened",
@@ -2556,7 +2560,7 @@ const data = {
         },
         "the_law": {
 			"numberOfFriends": 5,
-            "ability": ["i_am_the_law", "a_story_to_tell", "this_aint_no_coon_hunt", "ask_what_your_country_can_do_for_you", "s_only_a_flesh_wound", "moral_compass", "tactical_genius", "veteran"],
+            "ability": ["i_am_the_law", "a_story_to_tell", "this_aint_no_coon_hunt", "what_your_country_can_do_for_you", "s_only_a_flesh_wound", "moral_compass", "tactical_genius", "veteran"],
             "base": {
 				"hunt": "1",
 				"brawl": "1",
@@ -2603,10 +2607,10 @@ const data = {
 				"sling": "1",
 				"consort": "1",
 				"sway": "1",
-				"gatherinfo1": "gatherinfo_are_they_telling_the_truth",
-				"gatherinfo2": "gatherinfo_what_are_they_not_noticing",
-				"gatherinfo3": "gatherinfo_what_do_they_intend_to_do",
-				"gatherinfo4": "gatherinfo_how_can_i_get_them_to_x",
+				"gatherinfo1": "gatherinfo_what_do_they_intend_to_do",
+				"gatherinfo2": "gatherinfo_how_can_i_get_them_to_x",
+				"gatherinfo3": "gatherinfo_are_they_telling_the_truth",
+				"gatherinfo4": "gatherinfo_what_are_they_not_noticing",
 				"gatherinfo5": "gatherinfo_what_do_they_really_care_about",
 				"gatherinfo6": "gatherinfo_how_can_i_stand_out_here",
 				"playbook_description": "playbook_the_gamble_description",
@@ -2681,7 +2685,7 @@ const data = {
         },
         "the_outlaw": {
 			"numberOfFriends": 6,
-            "ability": ["one_of_those_days_again", "now_now_now", "dont_saw_that_coming", "daredevil", "vengeful", "some_fine_reputation", "blaze_of_glory", "veteran"],
+            "ability": ["one_of_those_days", "now_now_now", "didnt_saw_that_coming", "daredevil", "vengeful", "some_fine_reputation", "blaze_of_glory", "veteran"],
             "base": {
 				"survey": "1",
 				"sling": "1",
@@ -2701,7 +2705,7 @@ const data = {
 				"numboxes": "1"
 			}, {
 				"name": "playbook_item_a_fine_rifle_or_shotgun",
-				"description": "playbook_item_fine_rifle_or_bow_description",
+				"description": "playbook_item_a_fine_rifle_or_shotgun_description",
 				"numboxes": "1"
 			}, {
 				"name": "playbook_item_a_fine_poncho_or_sombrero",
@@ -2750,8 +2754,8 @@ const data = {
 				"description": "playbook_item_spirit_bane_or_charm_description",
 				"numboxes": "0"
 			}, {
-				"name": "playbook_item_light_climbing_gear",
-				"description": "playbook_item_light_climbing_gear_description",
+				"name": "playbook_item_outdoor_survival_kit",
+				"description": "playbook_item_outdoor_survival_kit_description",
 				"numboxes": "1"
 			}, {
 				"name": "playbook_item_taboco_poison_medicine",
@@ -2909,7 +2913,7 @@ const data = {
 			}, {
 				"name": "playbook_item_fine_experimental_rifle",
 				"description": "playbook_item_fine_experimental_rifle_description",
-				"numboxes": "1"
+				"numboxes": "2"
 			}, {
 				"name": "playbook_item_fine_useful_parts",
 				"description": "playbook_item_fine_useful_parts_description",
@@ -2927,125 +2931,150 @@ const data = {
 				"description": "playbook_item_a_disturbing_truth_description",
 				"numboxes": "0"
 			}]
+        },
+        "the_revenant": {
+			"numberOfFriends": 0,
+            "ability": ["one_step_beyond", "angel_of_vengeance", "touched_by_the_burning_beyond", "hellfire_torch", "unholy_mount", "like_johan", "superiority", "veteran_revenant"],
+            "base": {
+				"hunt": "1",
+				"attune": "1",
+				"gatherinfo1": "gatherinfo_what_do_they_want_most",
+				"gatherinfo2": "gatherinfo_who_here_is_guilty",
+				"gatherinfo3": "gatherinfo_whats_supernatural_here",
+				"gatherinfo4": "gatherinfo_how_can_i_get_x",
+				"gatherinfo5": "gatherinfo_what_do_they_fear",
+				"gatherinfo6": "gatherinfo_how_can_i_get_them_to_x",
+				"playbook_description": "playbook_the_revenant_description",
+				"xp_condition": "playbook_the_revenant_xp_condition"
+            },
+            "playbookitem": [{
+				"name": "playbook_item_a_memento",
+				"description": "playbook_item_a_memento_description",
+				"numboxes": "0"
+			}]
         }
     },
 	"factions": {
 		"factions1": [{
-			"name": "faction_the_8th_us_cavalry",
+			"name": "faction_the_8th_cavalry",
 			"tier": "IV",
 			"hold": "W",
-			"notes": "Busy fighting native war parties lately and trying to cover lots of coach and train lines to prevent attacks. Not easy for them to come to Mudwater because the tribes are paying serious attention especially if the troop is bigger than a few soldiers. Rumors about getting new supplies from the Capital City, including better weapons & some kind of other 'support'."
+			"notes": "Busy fighting native war parties lately and trying to cover lots of coach and train lines to prevent attacks. Not easy for them to come to Mudwater because the tribes are paying serious attention especially if the troop is bigger than a few soldiers. Eager to put those natives into their place. Rumors about getting new supplies from the Capital City, including better weapons & some kind of other 'support'. What is certain is that - thanks to good pay for the officers - they work mainly for 'economic interests', at least as long as the money's right."
 		}, {
 			"name": "faction_ironware_metal_goods",
 			"tier": "III",
 			"hold": "S",
-			"notes": " The top dog of licensed Hellstone mining companies in Mudwater. Grew really quick thanks to the new trade. Some rumors about staff members being corrupt and big chunks of Hellstone slipping through the cracks. Managed by Philomena Standish, the wife of bank director Barnabas Standish."
+			"notes": "The top dog of licensed Hellstone mining companies in Mudwater. Grew really quick thanks to the new trade and ruthless methods. Some rumors about staff members being corrupt and big chunks of Hellstone slipping through the cracks. Managed by Philomena Standish, the wife of bank director Barnabas Standish."
 		}, {
 			"name": "faction_northern_rail_transport",
 			"tier": "III",
 			"hold": "S",
-			"notes": "The bigger rail company in Mudwater trying to make progress with their railroad connection. Fighting for the exclusive gov’ment contract and quick to complain at Fort Hubert if its trains or workers are attacked."
+			"notes": "The bigger rail company trying to make progress with their railroad connection. Owner Jefferson Caulfield and his brother Franklin are fighting for the exclusive gov’ment contract and quick to complain at Fort Hubert if their trains or workers are attacked. Lately the 8th Cavalry has been slow to respond when these calls for help come in.  Malicious gossip has it that this may have something to do with the new East-West connection."
+		}, {
+			"name": "faction_the_thunder_raven_tribe",
+			"tier": "III",
+			"hold": "S",
+			"notes": "One of the bigger local native tribes said to have the strongest and most advanced Hellstone-powered medicine. Guided by a powerful raven totem, they make great advancements and skillfully combine ancient rituals with their new Hellstone energy. They like to attack under the cover of nightly darkness, often supported by thunderstorm and spirits of nature. Gray eminence behind Chief Good Hunter is the shaman The Old One. Friends since childhood days, nowadays they do not always share the same opinion about what is the right way for the tribe."
 		}, {
 			"name": "faction_fells_wargo",
 			"tier": "III",
 			"hold": "W",
-			"notes": "Similar to the Pony Express, all carriages of Fells & Wargo are licensed for deliveries into native territory and Mudwater. Currently a fierce competition with the Express results into several carriages ambushed, missing or lost. People say that the Thunder Raven Tribe is responsible for those incidents with the Pony Express as beneficiary."
-		
+			"notes": "Similar to the Pony Express, all carriages of Fells & Wargo are licensed for deliveries into native territory and Mudwater. Currently a fierce competition with the Express results into several carriages ambushed, missing or lost. People say that the Thunder Raven Tribe is responsible for those incidents with the Pony Express as beneficiary. Led by Seth Tibbot, who considers himself a friendly person, an opinion shared by only a few others. Pays good money for solid leads that connect to the Thunder Ravens."
 		}, {
 			"name": "faction_horizon_credit_union",
 			"tier": "III",
 			"hold": "W",
-			"notes": "Biggest bank in Mudwater with breathtaking profits through financing Hellstone mines and other daring and high risk enterprises. Director Barnabas P. Standish is father-in-law to Mayor Walter Smith and husband to Philomena Standish. Standish is often seen at the House of Roses for “business activities”."
+			"notes": "Biggest bank in Mudwater with breathtaking profits through financing Hellstone mines and other daring and high risk enterprises. Director Barnabas P. Standish is father-in-law to Mayor Walter Smith and husband to Philomena Standish. Standish is often seen at the House of Roses for 'business activities'."
 		}, {
 			"name": "faction_good_health_association",
 			"tier": "III",
 			"hold": "W",
-			"notes": "Inconspicuous private organization with a solid membership among the prestigious citizens of the city. Public goal is the advancement of the common good: Hardly any event in the city without approval of Good Health. Only the inner circle (calling itself the „Knights of Solomon“) knows the real goal, but no one’s talking and membership of the inner circle is highly exclusive. Some rumors about secret places and rituals in the wild, purpose unknown. Investing into new, weird and unconventional research."
-		}, {
-			"name": "faction_the_thunder_raven_tribe",
-			"tier": "II",
-			"hold": "S",
-			"notes": "One of the bigger local native tribes said to have the strongest and most advanced Hellstone-powered medicine (Ghost Dance). Gray eminence behind Chief Canowicakte is the shaman Kangee. They like to attack under the cover of nightly darkness, often supported by thunderstorm and spirits of nature."
+			"notes": "Inconspicuous private organization with a solid membership among the prestigious citizens of the city. Public goal is the advancement of the common good: Hardly any event happens in the city without approval of Good Health. Only the inner circle (calling itself the 'Knights of Solomon') knows the real goal, but no one’s talking and membership of the inner circle is highly exclusive. Some rumors about secret places and rituals in the wild, purpose unknown. Investing into new, weird and unconventional research."
 		}, {
 			"name": "faction_eastwest_rail",
 			"tier": "II",
 			"hold": "S",
-			"notes": "Smaller and more aggressive rail company in Mudwater. Sometimes it seems that it’s more important to them to sabotage Northern Rail & Transport than to make progress with their own tracks. Also fighting for the exclusive gov’ment contract. Headed my Ruth McCoy and also dealing in contraband."
+			"notes": "Smaller and more aggressive rail company in Mudwater. Sometimes it seems that it’s more important to them to sabotage Northern Rail & Transport than to make progress with their own tracks. Also fighting for the exclusive gov’ment contract. Headed by Ruth McCoy, dealing in contraband and illegal Hellstone."
 		}, {
 			"name": "faction_diamond_trust",
 			"tier": "II",
 			"hold": "S",
-			"notes": "Playing the second fiddle as a local bank “The Trust” is taking back seat in financing the secondary businesses like diamonds or gold mines. It’s only a matter of time before Director Arthur Peabody draws on his shady past and some unconventional methods to disturb the family ties between the city and his competition."
+			"notes": "Playing the second fiddle, 'The Trust' is taking the back seat in financing the secondary businesses like diamonds or gold mines. It’s only a matter of time before director Arthur Peabody draws on his shady past and some unconventional methods to disturb the family ties between the city and his competition."
 		}, {
 			"name": "faction_the_pony_express",
 			"tier": "II",
 			"hold": "S",
-			"notes": "“The Express” is licensed for deliveries into the native territory and Mudwater. Lately under much pressure from competitor Fells & Wargo, because a single rider can only transport a small amount of Hellstone at a time. They are usually much faster, if the rider don’t vanish or dies from mutation or other cause."
+			"notes": "'The Express' is licensed for deliveries into the native territory and Mudwater. Lately under much pressure from competitor Fells & Wargo, because a single rider can only transport a small amount of Hellstone at a time. They are usually much faster, if the rider doesn’t vanish or dies from mutation or other cause."
 		}, {
 			"name": "faction_the_twins",
 			"tier": "II",
 			"hold": "S",
-			"notes": "Horatio and Ulysses Jones escaped from state prison only recently and are newcomers in town. Despite their short presence they already built some real clout due to their very aggressive methods. Rumors about them being a gang with 'unholy obligation & payback in hell' are surely exaggerated."
+			"notes": "Horatio and Ulysses Jones escaped from state prison only recently and are newcomers in town. Despite their short presence in Mudwater they already built some real clout due to their very aggressive methods. Rumors about them being a gang with 'unholy obligation & payback in Hell' are surely exaggerated."
 		}, {
 			"name": "faction_the_inquisition",
 			"tier": "II",
 			"hold": "S",
-			"notes": "They claim to be sent by His Holiness the Pope himself for the salvation of the true believers. And they have a fancy official certificate to prove it. Only the Head Inquisitor “Michael” is known by face and name, all other Inquisitors are always hooded. Is there a terrible secret hidden beneath those hoods? Relationships to town officials, local church and nearly everybody else in Mudwater are tense. Michael may pay bounties for killed demons as long as you can prove the kill somehow."
+			"notes": "They claim to be sent by His Holiness the Pope himself for the salvation of the true believers. And they have a fancy official certificate to prove it. Only the Head Inquisitor 'Michael' is known by face and name, all other Inquisitors are always hooded. Is there a terrible secret hidden beneath those hoods? How many of them are there? Relationships to town officials, local church and nearly everybody else in Mudwater are tense. Michael may pay bounties for killed demons as long as you can prove the kill somehow."
+		}, {
+			"name": "faction_mr_wongs_family_business",
+			"tier": "II",
+			"hold": "S",
+			"notes": "Not only the Classic chinese laundry but other 'business' as well. At least three generations of Wongs doing their duty in this family business. Head of the family is Wong Cheng, age well beyond 80, who came with his three sons Lu, Ha and Tuan and their wives into the country. They were offered no mercy on their path and therefore they tend to show none either. Rumors about mysterious ways like sticking needles into bodies and other blood magic were heard. Fact is that competitors tend to disappear when they get too cocky. Having an eye on the House of Roses."
+		}, {
+			"name": "faction_the_house_of_roses",
+			"tier": "II",
+			"hold": "S",
+			"notes": "Aunt Polly owns the best whorehouse in town. Young, old, boys, girls? You name it, she has it and plenty of it, more than you need. She does not only trade in sinful pleasures of the flesh but has a solid side business of dealing in secrets. Many of them are revealed, traded, whitewashed and 'forgotten' in Polly’s house, for a reasonable 'fee' of course. Lately, she prevented a hostile and bloddy takeover attempt executed by the Wong family. After some struggle both sides agreed on a peaceful cooperation ... for now."
 		}, {
 			"name": "faction_fine_energy_enterprise",
 			"tier": "II",
 			"hold": "W",
-			"notes": "Second largest Hellstone buyer in Mudwater is “the Enterprise” – headed by John Cusack, brother to Philomena Standish - trying to provide what they think is clean energy for new technology. Very curious about I&MG’s plan about a Hellstone Refinery and more than willing to pay for that kind of information. Investing in new claims and sabotage."
+			"notes": "Headed by John Cusack, brother to Philomena Standish, 'the Enterprise' is the second largest Hellstone buyer in Mudwater. Trying to provide what they think is clean energy for new technology. Is very curious about I&MG’s plan about a Hellstone refinery and more than willing to pay good money for that kind of information. Investing in new claims, sabotage and anything that could bring an advantage. Cusack's sick of being just the little brother and he's got something to prove."
 		}, {
 			"name": "faction_lord_dorian_lockwoodtate",
 			"tier": "II",
 			"hold": "W",
-			"notes": "An English Earl (so it is said) being in the country for wealth and to bring fine arts to the people. That’s what he would say if asked. Rumors have it that he had to leave England with his butler Alfred in a hurry after he hammered a stake into the heart of an alleged vampire / fellow English man. Splendid. May be wealthy, but this is hard to say. Had a run-in recently with the Good Health Association about that Shakespeare performance in the House of Roses."
+			"notes": "An English Earl (so it is said) being in the country for wealth and to bring fine arts to the people. That’s what he would say if asked. Rumors have it that he had to leave England with his butler Alfred in a hurry after he hammered a stake into the heart of an alleged vampire / fellow English man. Splendid. May be wealthy, but this is hard to say. Had a run-in recently with the Good Health Association about that Shakespeare performance at Bell Saloon."
 		}, {
 			"name": "faction_first_church_of_saint_michael",
 			"tier": "II",
 			"hold": "W",
-			"notes": "Father Ike used to be the will of the Lord until the Inquisition showed up. Has still some clout with the people but his hold is weakened. A notorious drunk he first doesn’t seem to care but lately his sermons tend to focus on false prophets and religious zealots on their way to hell. Especially those calling themselves “Michael”. You got to love his energy!"
-		}, {
-			"name": "faction_the_house_of_roses",
-			"tier": "I",
-			"hold": "S",
-			"notes": "Aunt Polly owns the best whorehouse in town. Young, old, boys, girls? You name it, she got it. She does not only trade in sinful pleasures of the flesh but has a solid side business of dealing in secrets. Many of them are revealed, traded, whitewashed and 'forgotten' in Polly’s house, for a reasonable 'fee' of course. Lately, she prevented a hostile takeover attempt executed by the Wong Family. After some struggle both sides agreed on a peaceful cooperation... for now."
+			"notes": "Father Ike used to be the will of the Lord until the Inquisition showed up. Has still some clout with the people but his hold is weakened. A notorious drunk he first doesn’t seem to care but lately his sermons tend to focus on false prophets and religious zealots on their way to Hell. Especially those calling themselves 'Michael'. Some say he listens to the voices of angels who tell him what to do and who urge him on. You got to love his energy!"
 		}, {
 			"name": "faction_rattlesnake_gang",
 			"tier": "I",
 			"hold": "S",
-			"notes": "The inner circle of the gang consists of family Burns, headed by Edwina Burns since her husband Rufus died approximately a year ago. Edwina is convinced that her husband will be back, not only soon but also alive. That may explain why she’s always in company of a coffin in which the mortal remains of Rufus should rest. Primary mean of the gang to earn money are robberies."
-		}, {
-			"name": "faction_mr_wongs_family_business",
-			"tier": "I",
-			"hold": "S",
-			"notes": "Not only the classic laundry but other “business” as well. At least three generations of Wongs doing their duty in this family business. Head of the family is Wong Cheng, age > 80, who came with his three sons (Fan, Hai and Huang) and their wives into the country. Rumors about mysterious ways like sticking needles into bodies and other blood magic were heard."
+			"notes": "The inner circle of the gang consists of family Burns, headed by Edwina Burns since her husband Rufus died approximately a year ago. Edwina is convinced that her husband will be back, not only soon but also alive. That may explain why she’s always in company of a coffin in which the mortal remains of Rufus should rest. Primary mean of the gang to earn money are robberies, but recently also individual acquisitions of strange materials. The latter seem to be for personal use."
 		}, {
 			"name": "faction_the_shadow_valley_gang",
 			"tier": "I",
 			"hold": "S",
-			"notes": "Outlaw posse with hideout somewhere in the Shadow Valley. Rumored to be headed by a group of sisters of unknown origin. The posse is a tight-knit gang committed to absolute secrecy. The fact that a caught member who tried to brag died from spontaneous combustion strengthened the rumor that the gang is also a dark cult. Searching for artefacts lately."
+			"notes": "Outlaw posse with hideout somewhere in the Shadow Valley. Rumored to be headed by a group of sisters of unknown origin. The posse is a tight-knit gang committed to absolute secrecy. The fact that a caught member who tried to brag died from spontaneous combustion strengthened the rumor that the gang is also a dark cult. Searching for artifacts lately. The only known contacts in town are Hector Martínez and his sister Alva. They haven't been seen in Mudwater for quite some time."
 		}, {
 			"name": "faction_explorers_society",
 			"tier": "I",
 			"hold": "S",
-			"notes": "Wild mixture of east coast professors / scholars and adventurers claiming to explore the mines and caves to find out more about Hellstone and the event which made Hellstone happen. Also known to sell found artefacts on the black market. Buying and hoarding Hellstone for an unknown purpose."
+			"notes": "Wild mixture of east coast professors / scholars and adventurers claiming to explore the mines and caves to find out more about Hellstone and the event which made Hellstone happen. Also known to sell found artifacts on the black market. Buying and hoarding Hellstone for an unknown purpose."
+		}, {
+			"name": "faction_the_mother_of_bones",
+			"tier": "I",
+			"hold": "S",
+			"notes": "A mysterious creature from the Burning Beyond. Her goal seems to be merging of spirits and demons. For what purpose is unknown. Also unknown is what the Mother actually is. Is she a demon who was driven out of Hell? Is she a spirit that no longer finds acceptance among her kind? Is she already such a merged being now trying to preserve her species? It is evident that she needs allies to survive in the physical world. Without allies she is not yet able to give birth to her offspring. What does she has to offer? Who would get involved with her? Who would call her ’Mother’?"
 		}, {
 			"name": "faction_the_black_rider",
 			"tier": "I",
 			"hold": "W",
-			"notes": "Supposedly an undead law man reverted from Hell to take revenge. Who did him wrong is not known, other goals or motives are also unknown. Often accompanied by a native shaman and it’s not always clear whether the Black Rider himself or the shaman is the driving force in this vendetta."
+			"notes": "Supposedly an undead law man reverted from Hell to take revenge. Who did him wrong is not known. What it was about or other goals or motives are also unknown. Often accompanied by a native shaman and it’s not always clear whether the Black Rider himself or the shaman is the driving force in this vendetta."
 		}, {
 			"name": "faction_miners_union",
 			"tier": "I",
 			"hold": "W",
-			"notes": "Some desperate souls trying to give the hard working and risk taking men and women in the mines what they deserve. Maybe desperate enough to take some unconventional actions. Headed by Gus Cochran, trying to make up his mind about his Lordship. Waiting for support from the Capital City."
+			"notes": "Some desperate souls trying to give the hard working and risk taking men and women in the mines what they deserve. Maybe desperate enough to take some unconventional actions. Headed by Gus Cochran and sister Rachel, trying to make up his mind about his Lordship. Waiting for support from the Capital City."
 		}, {
 			"name": "faction_southern_refugees",
 			"tier": "I",
 			"hold": "W",
-			"notes": "Lots of families trying to have a better life here than in down in the South. Fat chance with those all those demons and town folks eying them suspiciously. Very religious and superstitiously. Often divided about what’s right and wrong, much talking and solo efforts by single persons or families."
+			"notes": "Lots of families trying to have a better life here than down in the South. Fat chance with those all those demons and town folks eying them suspiciously. Very religious and superstitious. Often divided about what’s right and wrong, with much debating and solo efforts by single persons or families."
 		}, {
 			"name": "faction_native_tribes_from_session_one",
 			"tier": "I/II",
@@ -3053,11 +3082,11 @@ const data = {
 		}]
 	},
 	"actions": {
-		"insight": ["hunt", "read", "survey", "craft"],
+		"wits": ["hunt", "read", "survey", "craft"],
 		"prowess": ["sling", "prowl", "brawl", "disable"],
 		"guts": ["attune", "command", "consort", "sway"]
 	},
-	"traumas": ["cold", "haunted", "obsessed", "paranoid", "reckless", "soft", "unstable", "vicious"],
+	"traumas": ["scarred", "corrupted", "visions", "gloryhound", "voices", "cursed", "numb", "hunted", "shamed"],
 	"items": [{
 		"name": "a_pistol",
 		"description": "a_pistol_description",
@@ -3103,16 +3132,16 @@ const data = {
 		"description": "a_horse_with_saddle_description",
 		"numboxes": "0"
 	}, {
-		"name": "climbing_gear",
-		"description": "climbing_gear_description",
-		"numboxes": "2"
+		"name": "a_rope",
+		"description": "a_rope_description",
+		"numboxes": "1"
 	}, {
 		"name": "documents",
 		"description": "documents_description",
 		"numboxes": "1"
 	}, {
-		"name": "arcane_implements",
-		"description": "arcane_implements_description",
+		"name": "arcane_ingredients",
+		"description": "arcane_ingredients_description",
 		"numboxes": "1"
 	}, {
 		"name": "subterfuge_supplies",
@@ -3129,7 +3158,7 @@ const data = {
 	}, {
 		"name": "a_spirit_bane",
 		"description": "a_spirit_bane_description",
-		"numboxes": "0"
+		"numboxes": "1"
 	}, {
 		"name": "an_useful_item",
 		"description": "an_useful_item_description",
@@ -3177,8 +3206,8 @@ const data = {
 		"upgrade_16_description": "upgrade_horses_description",		
 		"upgrade_17_name": "hellstone",
 		"upgrade_17_description": "upgrade_hellstone_description",		
-		"upgrade_20_name": "insight",
-		"upgrade_20_description": "upgrade_insight_description",
+		"upgrade_20_name": "wits",
+		"upgrade_20_description": "upgrade_wits_description",
 		"upgrade_21_name": "prowess",
 		"upgrade_21_description": "upgrade_prowess_description",
 		"upgrade_22_name": "guts",
@@ -3212,7 +3241,7 @@ const data = {
 									"gatherinfo1", "gatherinfo2", "gatherinfo3", "gatherinfo4", "gatherinfo5", "gatherinfo6"]
 };
 /* global data, getTranslationByKey, getAttrs, setAttrs, on, getSectionIDs, generateRowID, removeRepeatingRow */
-const sheetVersion = "0.1";
+const sheetVersion = "1.0";
 const sheetName = "A Fistful of Darkness";
 const getTranslation = (key) => (getTranslationByKey(key) || "NO_TRANSLATION_FOUND");
 /* It's necessary to include the base data at the start of the file */

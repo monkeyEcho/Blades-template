@@ -4,6 +4,9 @@ Character sheet for A Fistful of Darkness (a Blades in the Dark hack) for use on
 
 ## Changelog
 
+### 09.04.2020
+V1.0 First full release. Matching the first book release.
+
 ### 22.09.2018
 First release
 

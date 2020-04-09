@@ -51,7 +51,7 @@ sass.render({
 }, (error, result) => {
 	if (!error) {
 		const cssOutput = result.css.toString("utf8").replace(/^@charset "UTF-8";\s*/, "").replace(/^\uFEFF/, "").replace(/\n\n/g, "\n");
-		fs.writeFile("blades.css", cssOutput, printOutput);
+		fs.writeFile("aFoD.css", cssOutput, printOutput);
 	} else {
 		console.log(`An error occured in the CSS build.\n${error.line}:${error.column} ${error.message}.`);
 	}
@@ -59,5 +59,5 @@ sass.render({
 
 // Build HTML
 const htmlOutput = pug.renderFile("Source/Blades.pug", options).trim().replace(/\n+/g, "\n");
-fs.writeFile("blades.html", `${htmlOutput}\n`, printOutput);
+fs.writeFile("aFoD.html", `${htmlOutput}\n`, printOutput);
 
