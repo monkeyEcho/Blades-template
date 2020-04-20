@@ -13,6 +13,9 @@ First release
 ### 18.06.2018
 Branched from original Blades files
 
-## Notes
-If you have something to say, say it here.
+## Notes / TODO List
+- Improve colors Location Cards (black / red)
+- Improve colors Achievements (better contrast)
+- Bugfix to Outlaw Achievements (wrong category)
+- Add credits for Jacob and Tim
 
