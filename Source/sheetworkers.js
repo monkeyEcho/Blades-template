@@ -1,5 +1,5 @@
 /* global data, getTranslationByKey, getAttrs, setAttrs, on, getSectionIDs, generateRowID, removeRepeatingRow */
-const sheetVersion = "1.0";
+const sheetVersion = "1.1";
 const sheetName = "A Fistful of Darkness";
 const getTranslation = (key) => (getTranslationByKey(key) || "NO_TRANSLATION_FOUND");
 /* It's necessary to include the base data at the start of the file */

@@ -2304,7 +2304,6 @@ input.sheet-checkbox.sheet-squarebox-small, .sheet-checkbox.sheet-squarebox-smal
 		line-height: 12px;
 	}
 	textarea {
-		color: $darkgrey;
 		text-align: center;
 		font-size: 9px;
 		resize: none;
@@ -2315,7 +2314,7 @@ input.sheet-checkbox.sheet-squarebox-small, .sheet-checkbox.sheet-squarebox-smal
 		}
 	}
 	label {
-		color: $darkgrey;
+		color: $dd-light;
 		position: absolute;
 		bottom: 1px;
 		left: 1px;
@@ -2325,16 +2324,25 @@ input.sheet-checkbox.sheet-squarebox-small, .sheet-checkbox.sheet-squarebox-smal
 	//background: $dd-grey;
 	background-image: url('https://www.dropbox.com/s/o6qv50ex7anfsp7/box_neutral.png?raw=1');
     background-repeat: round;
+	textarea {
+		color: $lighterblack;
+	}
 }
 .sheet-claimbox-light {
 	//background: $dd-light;
 	background-image: url('https://www.dropbox.com/s/etqttco4d9tkl3y/box_light.png?raw=1');
     background-repeat: round;
+	textarea {
+		color: $lighterblack;
+	}
 }
 .sheet-claimbox-darkness {
 	//background: $dd-black;
 	background-image: url('https://www.dropbox.com/s/9pvyb1tegtwde9e/box_darkness.png?raw=1');
     background-repeat: round;
+	textarea {
+		color: $dd-light;
+	}
 }
 
 input[value="1"] + .sheet-claimbox-light {
@@ -2550,7 +2558,7 @@ input.sheet-expand, .sheet-expand + span {
 
 .sheet-locationcard { 
 	border-radius: 5px;
-    background: $dd-black;
+    background: rgba(5, 5, 5, 0.5);
     padding: 1px;
 	margin-top: 5px;
 
@@ -2559,13 +2567,15 @@ input.sheet-expand, .sheet-expand + span {
 		text-transform: uppercase;
 		padding-left: 5px;
 		padding-right: 5px;
-		color: dd-darkred;
+		color: $dd-light;
 	}
 	textarea {
-		background: rgba(255, 255, 255, 0.75);
+		background: rgba(255, 255, 255, 0.5);
 		font-size: 11px;
 		line-height: 1.5;
+		padding: 3px;
 		height: 51px;
+		color: $dd-black;
 	}
 	label {
 		font-size: 10px;
@@ -2574,8 +2584,8 @@ input.sheet-expand, .sheet-expand + span {
 		padding: 3px;
 		text-align: right;
 		vertical-align: middle;
-		color: $dd-light;
 		font-style: italic;
+		color: $dd-light;
 	}
 	input[type=number] {
 		border: none;
@@ -2584,6 +2594,7 @@ input.sheet-expand, .sheet-expand + span {
 		font-size: 12px;
 		width: 30px;
 		text-align: center;
+		color: $dd-light;
 	}
 	.sheet-location-stats-row {
 		display: flex;
