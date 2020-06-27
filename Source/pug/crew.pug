@@ -290,7 +290,16 @@ mixin makeupgrade100(number, numboxes, def, desc)
 					+makeupgrade(14, 1, 'weapons', 'upgrade_weapons_description')
 					+makeupgrade(15, 1, 'tools', 'upgrade_tools_description')
 					+makeupgrade(16, 1, 'horses', 'upgrade_horses_description')
-					+makeupgrade(17, 2, 'hellstone', 'upgrade_hellstone_description')
+					.col50
+						.item
+							each num in range(1,3)
+								+checkbox(`upgrade_17_check_${num}`).checkbox.squarebox
+								if (num < 3)
+									span.floatingbar
+							+text-input('upgrade_17_name', 'hellstone').itemname
+						.item-description
+							+checkbox('upgrade_17_expand').expand
+							+textarea('upgrade_17_description', 'upgrade_hellstone_description')(data-i18n-placeholder='description')
 					.item.upgradecaption.col100
 						span.label(data-i18n='training')
 					+makeupgrade(20, 1, 'insight', 'upgrade_insight_description')
