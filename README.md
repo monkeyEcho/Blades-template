@@ -4,6 +4,10 @@ Character sheet for A Fistful of Darkness (a Blades in the Dark hack) for use on
 
 ## Changelog
 
+## 27.06.2020
+V1.2 
+- Fine Hellstone fixed (was 2 not connected boxes, now 3 connected boxes)
+
 ## 25.04.2020
 V1.1
 - Improved colors for Location Cards (black / red)
