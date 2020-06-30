@@ -2,7 +2,7 @@
 /* dd-color scheme */
 /* GENERALITIES */
 .charsheet {
-  background: url("https://www.dropbox.com/s/73ke7x0upgx98jd/A4_BW_Parchment.jpg?raw=1");
+  background: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/A%20Fistful%20of%20Darkness/Assets/A4_BW_Parchment.jpg");
   color: #0e0c0c;
   font-size: 0;
   position: relative;
@@ -289,7 +289,7 @@
 }
 /* USEFUL GENERAL LAYOUT*/
 .sheet-blackheader {
-  background-image: url("https://www.dropbox.com/s/pata0efmnkn5yil/mE_myOwnPaperStrips01-2.png?raw=1");
+  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/A%20Fistful%20of%20Darkness/Assets/mE_myOwnPaperStrips01-2.png");
   background-repeat: round;
   color: white;
 }
@@ -327,7 +327,7 @@
   line-height: 22px;
 }
 .sheet-specialheader {
-  background-image: url("https://www.dropbox.com/s/pata0efmnkn5yil/mE_myOwnPaperStrips01-2.png?raw=1");
+  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/A%20Fistful%20of%20Darkness/Assets/mE_myOwnPaperStrips01-2.png");
   background-repeat: round;
   transform: rotate(1deg);
   color: #fff6f6;
@@ -625,7 +625,7 @@ textarea.sheet-smallcaps {
 .sheet-bladeslogo {
   border-right: 12px solid transparent;
   height: 43px;
-  background-image: url("https://www.dropbox.com/s/1qnj7hcfm1dpdha/aFistfulOfDarkness_Logo_horizontal_grunged.png?raw=1");
+  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/A%20Fistful%20of%20Darkness/Assets/aFistfulOfDarkness_Logo_horizontal_grunged.png");
   background-size: 102% auto;
   background-repeat: no-repeat;
 }
@@ -1307,27 +1307,27 @@ input.sheet-tooth:last-of-type {
   opacity: 0.7;
 }
 .sheet-xptooth + span {
-  background-image: url("https://www.dropbox.com/s/h4e97xubsdhdo0s/xptooth-red.png?raw=1");
+  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/A%20Fistful%20of%20Darkness/Assets/xptooth-red.png");
   margin-right: 4px;
 }
 .sheet-tooth:checked ~ .sheet-xptooth + span {
-  background-image: url("https://www.dropbox.com/s/kwmkrf39bjewwvz/xptooth-white.png?raw=1");
+  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/A%20Fistful%20of%20Darkness/Assets/xptooth-white.png");
 }
 .sheet-stresstooth[type=radio] + span,
 .sheet-stresstooth[type=checkbox]:checked + span,
 .sheet-holdtooth:checked + span {
-  background-image: url("https://www.dropbox.com/s/2fgk973ji5gckhr/stresstooth-red.png?raw=1");
+  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/A%20Fistful%20of%20Darkness/Assets/stresstooth-red.png");
 }
 .sheet-stresstooth[type=checkbox] + span,
 .sheet-tooth:checked ~ .sheet-stresstooth[type=radio] + span,
 .sheet-holdtooth + span {
-  background-image: url("https://www.dropbox.com/s/kecon36tg77sabv/stresstooth-white.png?raw=1");
+  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/A%20Fistful%20of%20Darkness/Assets/stresstooth-white.png");
 }
 .sheet-regulartooth + span {
-  background-image: url("https://www.dropbox.com/s/9lxyjraycuij5j3/shorttooth-red.png?raw=1");
+  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/A%20Fistful%20of%20Darkness/Assets/shorttooth-red.png");
 }
 .sheet-tooth:checked ~ .sheet-regulartooth + span {
-  background-image: url("https://www.dropbox.com/s/vwadbbosvhzkzcl/shorttooth-grey.png?raw=1");
+  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/A%20Fistful%20of%20Darkness/Assets/shorttooth-grey.png");
 }
 input.sheet-zero {
   width: 13px;
@@ -1394,10 +1394,10 @@ input.sheet-zero {
 .sheet-turf-input[value="4"] ~ input[type=radio].sheet-turf4 + span,
 .sheet-turf-input[value="5"] ~ input[type=radio].sheet-turf5 + span,
 .sheet-turf-input[value="6"] ~ input[type=radio].sheet-turf6 + span {
-  background-image: url("https://www.dropbox.com/s/5u07iauquhen566/stresstooth-black.png?raw=1");
+  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/A%20Fistful%20of%20Darkness/Assets/stresstooth-black.png");
 }
 .sheet-tooth:checked ~ .sheet-stresstooth.sheet-turf6 + span {
-  background-image: url("https://www.dropbox.com/s/lisy5xwuo0p40ax/stresstooth-halfgrey.png?raw=1");
+  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/A%20Fistful%20of%20Darkness/Assets/stresstooth-halfgrey.png");
 }
 /* SPECIAL ABILITIES*/
 .sheet-specialability,
@@ -1848,15 +1848,15 @@ input.sheet-zero {
   min-height: 378px;
 }
 .sheet-type-character {
-  background-image: url("https://www.dropbox.com/s/5nyoafzxl5irlob/splatter1.png?raw=1");
+  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/A%20Fistful%20of%20Darkness/Assets/splatter1.png");
   background-repeat: no-repeat;
 }
 .sheet-type-crew {
-  background-image: url("https://www.dropbox.com/s/6bye7xnoqjjc509/splatter2.png?raw=1");
+  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/A%20Fistful%20of%20Darkness/Assets/splatter2.png");
   background-repeat: no-repeat;
 }
 .sheet-type-faction {
-  background-image: url("https://www.dropbox.com/s/e132v6oigfucpi6/splatter3.png?raw=1");
+  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/A%20Fistful%20of%20Darkness/Assets/splatter3.png");
   background-repeat: no-repeat;
 }
 .sheet-type-character .sheet-notes, .sheet-type-crew .sheet-notes {
@@ -2058,7 +2058,7 @@ input.sheet-checkbox.sheet-squarebox-small, .sheet-checkbox.sheet-squarebox-smal
 }
 /* ACTION RATINGS */
 .sheet-attribute {
-  background-image: url("https://www.dropbox.com/s/djqhe4wooshpz5n/FoD_PokerCard1.png?raw=1");
+  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/A%20Fistful%20of%20Darkness/Assets/FoD_PokerCard1.png");
   background-repeat: no-repeat;
   padding-top: 20px;
   padding-bottom: 10px;
@@ -2072,7 +2072,7 @@ input.sheet-checkbox.sheet-squarebox-small, .sheet-checkbox.sheet-squarebox-smal
   height: 21px;
   line-height: 21px;
   color: white;
-  background-image: url("https://www.dropbox.com/s/pata0efmnkn5yil/mE_myOwnPaperStrips01-1.png?raw=1");
+  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/A%20Fistful%20of%20Darkness/Assets/mE_myOwnPaperStrips01-1.png");
   background-repeat: round;
   padding: 0 3px;
   align-items: center;
@@ -2277,21 +2277,21 @@ input.sheet-checkbox.sheet-squarebox-small, .sheet-checkbox.sheet-squarebox-smal
   left: 1px;
 }
 .sheet-claimbox-neutral {
-  background-image: url("https://www.dropbox.com/s/o6qv50ex7anfsp7/box_neutral.png?raw=1");
+  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/A%20Fistful%20of%20Darkness/Assets/box_neutral.png");
   background-repeat: round;
 }
 .sheet-claimbox-neutral textarea {
   color: #555;
 }
 .sheet-claimbox-light {
-  background-image: url("https://www.dropbox.com/s/etqttco4d9tkl3y/box_light.png?raw=1");
+  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/A%20Fistful%20of%20Darkness/Assets/box_light.png");
   background-repeat: round;
 }
 .sheet-claimbox-light textarea {
   color: #555;
 }
 .sheet-claimbox-darkness {
-  background-image: url("https://www.dropbox.com/s/9pvyb1tegtwde9e/box_darkness.png?raw=1");
+  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/A%20Fistful%20of%20Darkness/Assets/box_darkness.png");
   background-repeat: round;
 }
 .sheet-claimbox-darkness textarea {
@@ -2300,7 +2300,7 @@ input.sheet-checkbox.sheet-squarebox-small, .sheet-checkbox.sheet-squarebox-smal
 input[value="1"] + .sheet-claimbox-light {
   border: 1px solid #be1515;
   box-shadow: 0px 0px 4px #0e0c0c;
-  background-image: url("https://www.dropbox.com/s/7swql9mddspdnhe/box_light_checked.png?raw=1");
+  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/A%20Fistful%20of%20Darkness/Assets/box_light_checked.png");
   background-repeat: round;
 }
 input[value="1"] + .sheet-claimbox-light .sheet-label {
@@ -2309,7 +2309,7 @@ input[value="1"] + .sheet-claimbox-light .sheet-label {
 input[value="1"] + .sheet-claimbox-neutral {
   border: 1px solid #be1515;
   box-shadow: 0px 0px 4px #0e0c0c;
-  background-image: url("https://www.dropbox.com/s/7vkiwpm3n5cn18i/box_neutral_checked.png?raw=1");
+  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/A%20Fistful%20of%20Darkness/Assets/box_neutral_checked.png");
   background-repeat: round;
 }
 input[value="1"] + .sheet-claimbox-neutral .sheet-label {
@@ -2318,7 +2318,7 @@ input[value="1"] + .sheet-claimbox-neutral .sheet-label {
 input[value="1"] + .sheet-claimbox-darkness {
   border: 1px solid #be1515;
   box-shadow: 0px 0px 4px #0e0c0c;
-  background-image: url("https://www.dropbox.com/s/hexwib9wgfj76tm/box_darkness_checked.png?raw=1");
+  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/A%20Fistful%20of%20Darkness/Assets/box_darkness_checked.png");
   background-repeat: round;
 }
 input[value="1"] + .sheet-claimbox-darkness .sheet-label {
@@ -2723,7 +2723,7 @@ button[type=roll].sheet-broadcast-button {
   height: 258px;
 }
 .sheet-rolltemplate-bitd .sheet-fortune {
-  background-image: url("https://www.dropbox.com/s/s0bsgy5igi5skf8/rolltemplate-fortune.png?raw=1");
+  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/A%20Fistful%20of%20Darkness/Assets/rolltemplate-fortune.png");
   background-position: bottom right;
   background-repeat: no-repeat;
   background-color: white;
@@ -2731,13 +2731,13 @@ button[type=roll].sheet-broadcast-button {
   min-height: 250px;
 }
 .sheet-rolltemplate-bitd .sheet-action {
-  background-image: url("https://www.dropbox.com/s/qg4e66mvdoulnqh/rolltemplate-action.png?raw=1");
+  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/A%20Fistful%20of%20Darkness/Assets/rolltemplate-action.png");
 }
 .sheet-rolltemplate-bitd .sheet-resist {
-  background-image: url("https://www.dropbox.com/s/7rkca50q6anyefr/rolltemplate-resist.png?raw=1");
+  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/A%20Fistful%20of%20Darkness/Assets/rolltemplate-resist.png");
 }
 .sheet-rolltemplate-bitd .sheet-vice {
-  background-image: url("https://www.dropbox.com/s/p6hmky2mx98ib1j/rolltemplate-vice.png?raw=1");
+  background-image: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/A%20Fistful%20of%20Darkness/Assets/rolltemplate-vice.png");
 }
 .sheet-rolltemplate-bitd img {
   display: block;
