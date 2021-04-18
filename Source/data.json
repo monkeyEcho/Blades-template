@@ -337,7 +337,7 @@
         },
         "the_law": {
 			"numberOfFriends": 5,
-            "ability": ["i_am_the_law", "a_story_to_tell", "this_aint_no_coon_hunt", "what_your_country_can_do_for_you", "s_only_a_flesh_wound", "moral_compass", "tactical_genius", "veteran"],
+            "ability": ["i_am_the_law", "a_story_to_tell", "this_aint_no_piquenique", "what_your_country_can_do_for_you", "s_only_a_flesh_wound", "moral_compass", "tactical_genius", "veteran"],
             "base": {
 				"hunt": "1",
 				"brawl": "1",

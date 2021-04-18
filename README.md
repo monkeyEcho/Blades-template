@@ -4,6 +4,14 @@ Character sheet for A Fistful of Darkness (a Blades in the Dark hack) for use on
 
 ## Changelog
 
+## 18.04.2021
+V1.4 
+- Skipping version 1.3 to be in sync with version from the book
+- Name change of The Law Special Ability
+- Better readability for resisting via updated background picture
+- Fixed image preloading (from dropbox to github)
+- Fixed text for rolling Riders
+
 ## 27.06.2020
 V1.2 
 - Fine Hellstone fixed (was 2 not connected boxes, now 3 connected boxes)
